@@ -74,16 +74,17 @@ export function Download() {
 // COMPOSANTS UTILITAIRES
 // ------------------------------------------------------------------
 
-function SocialBtn({ icon: Icon, link, label }: { icon: any, link: string, label: string }) {
+const SocialBtn = ({ icon: Icon, link, label }) => {
   return (
     <a 
-      href={link}
-      target="_blank" // Ouvre dans un nouvel onglet
-      rel="noopener noreferrer" // Sécurité obligatoire pour les liens externes
-      className="w-12 h-12 flex items-center justify-center rounded-full bg-white shadow-sm hover:shadow-md hover:scale-110 hover:text-[#4AA171] transition-all duration-300 border border-gray-100 group"
-      aria-label={label}
+      href={link}          // ✅ Juste la variable, pas de slash, pas de guillemets
+      target="_blank"      // Ouvre dans un nouvel onglet (mieux pour les réseaux)
+      rel="noopener noreferrer" // Sécurité standard pour les liens externes
+      className="..."      // Tes classes de style actuelles
     >
-      <Icon className="w-5 h-5 text-gray-600 group-hover:text-[#4AA171]" />
+      <Icon className="..." />
+      {/* Si tu affiches le label */}
+      <span>{label}</span> 
     </a>
   );
 }
