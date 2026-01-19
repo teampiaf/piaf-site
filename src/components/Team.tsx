@@ -11,25 +11,25 @@ const team = [
     name: 'Orion Prudhomme',
     role: 'Président',
     color: 'bg-green-200', 
-    image: '../images/orion.png'
+    image: '/public/images/orion.png'
   },
   {
     name: 'Rafaël Racz',
     role: 'Vice-Président',
     color: 'bg-blue-200', 
-    image: '../images/rafael.png'
+    image: '/public/images/rafael.png'
   },
   {
     name: 'Haitam Grine',
     role: 'Secrétaire',
     color: 'bg-purple-200', 
-    image: '../images/haitam.png'
+    image: '/public/images/haitam.png'
   },
   {
     name: 'Julien Aprin',
     role: 'Trésorier',
     color: 'bg-orange-200', // Orange : Dynamisme / Gestion
-    image: '../images/julien.png'
+    image: '/public/images/julien.png'
   }
 ];
 
