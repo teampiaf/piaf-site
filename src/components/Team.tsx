@@ -35,11 +35,9 @@ const team = [
 export function Team() {
   return (
     <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-      <div className="bg-white/60 backdrop-blur-md rounded-[3rem] p-8 md:p-12 shadow-xl border border-white/50">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-            La Direction PIAF
-          </h2>
+      <div className="bg-white/20 backdrop-blur-2xl rounded-[3rem] p-8 md:p-12 shadow-2xl shadow-[#4AA171]/10 border border-white/25 ring-1 ring-white/10">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">La Direction PIAF</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Une équipe taillée pour le défi et unie par une même ambition : faire de cette technologie la nouvelle référence du marché.
           </p>
