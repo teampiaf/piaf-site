@@ -1,4 +1,6 @@
 import React from "react";
+import { Blob } from "./components/ui/Blob";
+
 // J'importe les icônes nécessaires
 import { Instagram, Linkedin } from "lucide-react";
 import { Hero } from "./components/Hero";
@@ -16,7 +18,14 @@ export function App() {
 
   // 2. PAGE D'ACCUEIL
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.16)_0%,_rgba(239,252,246,1)_45%,_rgba(255,255,255,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+  <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.16)_0%,_rgba(239,252,246,1)_45%,_rgba(255,255,255,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+    
+    {/* FOND GLOBAL (évite la “cassure” entre sections) */}
+    <div className="pointer-events-none absolute inset-0 -z-10">
+      <Blob className="top-0 left-0 w-[38rem] h-[38rem] bg-[#4AA171]/10 -translate-x-1/3 -translate-y-1/3" />
+      <Blob className="bottom-0 right-0 w-[46rem] h-[46rem] bg-[#E8E4D9]/70 translate-x-1/4 translate-y-1/4" />
+    </div>
+
       {/* HEADER */}
       <header className="relative w-full">
         <div className="w-full h-[140px] md:h-[225px]">
@@ -56,7 +65,8 @@ export function App() {
       </main>
 
       {/* PIED DE PAGE (FOOTER) */}
-      <footer className="bg-white/30 backdrop-blur-xl py-12 px-4 text-center text-gray-500 text-sm border-t border-white/30">
+      <footer className="bg-white/25 backdrop-blur-xl py-12 px-4 text-center text-gray-500 text-sm border-t border-white/30">
+
         {/* === AJOUT : LES RÉSEAUX SOCIAUX === */}
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn

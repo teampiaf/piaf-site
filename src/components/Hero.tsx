@@ -1,22 +1,16 @@
 import React from 'react';
 // Import des composants UI réutilisables
 import { Button } from './ui/Button';
-import { Blob } from './ui/Blob';
 
 export function Hero() {
   return (
-    <section className="relative w-full px-4 pb-8 pt-8 md:pt-0 overflow-hidden">
+      <section className="relative w-full px-4 pb-8 pt-0 overflow-hidden">
 
-      {/* --------------------  DÉCORATION D'ARRIÈRE-PLAN (Les "Blobs")  -------------------- */}
-      <Blob className="top-0 left-0 w-72 h-72 bg-[#4AA171]/10 -translate-x-1/2 -translate-y-1/2" />
-      <Blob className="bottom-0 right-0 w-96 h-96 bg-[#E8E4D9] translate-x-1/3 translate-y-1/3" />
-
-      {/* Conteneur centré pour le contenu */}
+      {/* Fond de couleur */}
       <div className="max-w-7xl mx-auto">
         
         {/* LA CARTE PRINCIPALE */}
         <div className="relative bg-white/35 backdrop-blur-xl rounded-[3rem] p-8 md:p-16 lg:p-24 shadow-2xl shadow-[#4AA171]/10 border border-white/30 ring-1 ring-white/15 overflow-hidden">
-
 
           {/* Cercle décoratif */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#F9F7F2] to-white rounded-bl-[10rem] -mr-10 -mt-10 z-0" />
