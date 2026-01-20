@@ -44,9 +44,12 @@ export function ProductShowcase() {
                 <button className="px-8 py-4 rounded-full bg-white text-[#4AA171] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1">
                   Commander le Kit
                 </button>
-                <button className="px-8 py-4 rounded-full bg-[#4AA171] border-2 border-white/30 text-white font-medium hover:bg-white/10 transition-colors">
+                <a
+                  href="/download"
+                  className="px-8 py-4 rounded-full bg-[#4AA171] border-2 border-white/30 text-white font-medium hover:bg-white/10 transition-colors inline-block text-center"
+                >
                   Télécharger l'App
-                </button>
+                </a>
               </div>
 
             </div>
