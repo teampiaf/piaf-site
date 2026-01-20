@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowLeft, Instagram, Linkedin } from 'lucide-react';
-import { LINKS } from "./config/links"; // adapte le chemin selon le fichier
+import { LINKS } from "../config/links"; // adapte le chemin selon le fichier
 
 
 export function Download() {
