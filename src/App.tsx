@@ -20,7 +20,7 @@ export function App() {
 
   // 2. PAGE D'ACCUEIL
   return (
-    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.12)_0%,_rgba(255,255,255,0.95)_55%,_rgba(239,252,246,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.14)_0%,_rgba(239,252,246,1)_45%,_rgba(255,255,255,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       
       {/* HEADER */}
       <header className="relative w-full">
