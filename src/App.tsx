@@ -1,6 +1,7 @@
 import React from "react";
 import { Blob } from "./components/ui/Blob";
 
+
 // J'importe les icônes nécessaires
 import { Instagram, Linkedin } from "lucide-react";
 import { Hero } from "./components/Hero";
