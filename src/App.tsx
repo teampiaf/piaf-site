@@ -29,17 +29,16 @@ export function App() {
 
         <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
-            <div className="flex gap-4 md:gap-12 items-center mt-6 md:mt-20 md:-mr-24">
+            <div className="flex flex-col md:flex-row gap-3 md:gap-12 items-end mt-3 md:mt-20">
               <a
                 href="mailto:piaf.contact@gmail.com"
-                className="hidden md:block bg-white/70 backdrop-blur-md text-[#4AA171] font-bold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 border border-white/30"
+                className="bg-white/70 backdrop-blur-md text-[#4AA171] font-bold px-4 py-2 md:px-6 md:py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 border border-white/30 text-sm md:text-base"
               >
                 Contact
               </a>
-
               <a
                 href="/download"
-                className="bg-[#4AA171] text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center"
+                className="bg-[#4AA171] text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-2 md:ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center text-sm md:text-base"
               >
                 Télécharger
               </a>
