@@ -1,6 +1,6 @@
 import React from 'react';
 // J'importe les icônes de la librairie Lucide pour illustrer les 4 piliers
-import { Heart, Feather, Sun, Cloud, Map, Zap, Users, Shield } from 'lucide-react';
+import { Map, Zap, Users, Shield } from 'lucide-react';
 
 // Configuration des données : Je modifie les textes ici pour ne pas toucher au HTML en bas
 const features = [
@@ -33,7 +33,7 @@ const features = [
 export function Features() {
   return (
     // Section principale avec marge verticale (py-20) et centrée
-    <section className="group relative bg-white/55 backdrop-blur-md p-6 rounded-[2.25rem] shadow-lg shadow-[#4AA171]/5 hover:shadow-xl hover:shadow-[#4AA171]/10 transition-all duration-500 hover:-translate-y-1 border border-white/60">
+    <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
       
       {/* En-tête de la section : Titre + Sous-titre */}
       <div className="text-center mb-16">
@@ -53,13 +53,13 @@ export function Features() {
           <div 
             key={index} 
             // Design de la carte : Dégradé subtil, bords arrondis, et ombre verte au survol
-            className="group relative bg-gradient-to-br from-[#F9F7F2] to-white p-8 rounded-[2.5rem] shadow-lg shadow-[#4AA171]/5 hover:shadow-xl hover:shadow-[#4AA171]/10 transition-all duration-500 hover:-translate-y-2 border border-white"
+            className="group relative bg-white/30 backdrop-blur-lg p-6 rounded-[2.5rem] shadow-xl shadow-[#4AA171]/10 hover:shadow-2xl hover:shadow-[#4AA171]/15 transition-all duration-500 hover:-translate-y-1 border border-white/25 ring-1 ring-white/10"
             style={{ animationDelay: feature.delay }}
           >
             {/* Le conteneur de l'icône (CARRÉ BLANC)
                Note : J'ai passé la taille à w-20 h-20 (80px) pour que ce soit plus imposant 
             */}
-            <div className="w-20 h-20 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 text-[#4AA171]">
+            <div className="w-20 h-20 bg-white/40 backdrop-blur-md rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 text-[#4AA171] border border-white/20">
               
               {/* L'icône elle-même : taille fixée à 40px */}
               <feature.icon size={40} />

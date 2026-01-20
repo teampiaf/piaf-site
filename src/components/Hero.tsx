@@ -16,8 +16,9 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         
         {/* LA CARTE PRINCIPALE */}
-        <div className="relative bg-white/80 backdrop-blur-sm rounded-[3rem] p-8 md:p-16 lg:p-24 shadow-xl shadow-[#4AA171]/5 border border-white/50 overflow-hidden">
-          
+        <div className="relative bg-white/35 backdrop-blur-xl rounded-[3rem] p-8 md:p-16 lg:p-24 shadow-2xl shadow-[#4AA171]/10 border border-white/30 ring-1 ring-white/15 overflow-hidden">
+
+
           {/* Cercle décoratif */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#F9F7F2] to-white rounded-bl-[10rem] -mr-10 -mt-10 z-0" />
 
