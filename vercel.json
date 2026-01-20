@@ -1,7 +1,7 @@
 {
   "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
   "redirects": [
-    { "source": "/instagram", "destination": "https://www.instagram.com/fly_with_piaf/", "permanent": false },
+    { "source": "/instagram", "destination": "https://www.instagram.com/team_piaf/", "permanent": false },
     { "source": "/linkedin", "destination": "https://www.linkedin.com/company/teampiaf", "permanent": false }
   ]
 }
