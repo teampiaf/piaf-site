@@ -44,7 +44,7 @@ export function App() {
       </header>
 
       {/* CONTENU PRINCIPAL */}
-      <main className="space-y-12 md:space-y-24 pb-24">
+      <main className="space-y-8 md:space-y-16 pb-16">
         <Hero />
         <Features />
         <ProductShowcase />

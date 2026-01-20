@@ -6,7 +6,7 @@ import { Blob } from './ui/Blob';
 export function Hero() {
   return (
     // CONTENEUR PRINCIPAL
-    <section className="relative w-full px-4 pb-12 pt-0 overflow-hidden">
+    <section className="relative w-full px-4 pb-8 pt-0 overflow-hidden">
       
       {/* --------------------  DÉCORATION D'ARRIÈRE-PLAN (Les "Blobs")  -------------------- */}
       <Blob className="top-0 left-0 w-72 h-72 bg-[#4AA171]/10 -translate-x-1/2 -translate-y-1/2" />
