@@ -1,5 +1,7 @@
 import React from 'react';
 import { ArrowLeft, Instagram, Linkedin } from 'lucide-react';
+import { LINKS } from "./config/links"; // adapte le chemin selon le fichier
+
 
 export function Download() {
   return (
@@ -43,21 +45,21 @@ export function Download() {
             {/* INSTAGRAM */}
             <SocialBtn 
               icon={Instagram} 
-              link="https://www.instagram.com/team_piaf/" 
+              link={LINKS.instagram} 
               label="Instagram" 
             />
             
             {/* LINKEDIN */}
             <SocialBtn 
               icon={Linkedin} 
-              link="https://www.linkedin.com/in/team-piaf" 
+              link={LINKS.linkedin}
               label="LinkedIn" 
             />
             
             {/* TIKTOK */}
             <SocialBtn 
               icon={TikTokIcon} 
-              link="https://www.tiktok.com/@fly_with_piaf" 
+              link={LINKS.tiktok}
               label="TikTok" 
             />
 

@@ -1,4 +1,6 @@
 import React from "react";
+import { LINKS } from "./config/links"; // adapte le chemin selon le fichier
+
 // J'importe les icônes nécessaires
 import { Instagram, Linkedin } from 'lucide-react';
 import { Hero } from "./components/Hero";
@@ -6,6 +8,8 @@ import { Features } from "./components/Features";
 import { ProductShowcase } from "./components/ProductShowcase";
 import { Team } from "./components/Team";
 import { Download } from "./components/Download"; 
+
+//----------------------------------------------------------------------------------------------------------
 
 export function App() {
   // 1. ROUTAGE SIMPLE
@@ -53,9 +57,10 @@ export function App() {
         {/* === AJOUT : LES RÉSEAUX SOCIAUX === */}
         {/* Je les ai mis dans un bloc juste avant la ligne de séparation (border-t) */}
         <div className="flex justify-center gap-6 mb-10">
-           <SocialFooterBtn icon={Instagram} link="https://www.instagram.com/piaf_app/" label="Instagram" />
-           <SocialFooterBtn icon={Linkedin} link="https://www.linkedin.com/company/piaf-app" label="LinkedIn" />
-           <SocialFooterBtn icon={TikTokIcon} link="https://www.tiktok.com/@piaf_app" label="TikTok" />
+          <SocialFooterBtn icon={Instagram} link={LINKS.instagram} label="Instagram" />
+          <SocialFooterBtn icon={Linkedin} link={LINKS.linkedin} label="LinkedIn" />
+          <SocialFooterBtn icon={TikTokIcon} link={LINKS.tiktok} label="TikTok" />
+
         </div>
 
         {/* LIGNE DE SÉPARATION & COPYRIGHT */}
