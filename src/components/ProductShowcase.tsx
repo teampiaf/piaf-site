@@ -41,15 +41,18 @@ export function ProductShowcase() {
               
               {/* Boutons d'action */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
-                <button className="px-8 py-4 rounded-full bg-white text-[#4AA171] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1">
-                  Commander le Kit
-                </button>
-                <a
-                  href="/download"
-                  className="px-8 py-4 rounded-full bg-[#4AA171] border-2 border-white/30 text-white font-medium hover:bg-white/10 transition-colors inline-block text-center"
-                >
-                  Télécharger l'App
-                </a>
+              <a
+                href="mailto:piaf.contact@gmail.com"
+                className="px-8 py-4 rounded-full bg-white text-[#4AA171] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1 inline-block text-center"
+              >
+                Demander une démo
+              </a>
+              <a
+                href="/download"
+                className="px-8 py-4 rounded-full bg-[#4AA171] border-2 border-white/30 text-white font-medium hover:bg-white/10 transition-colors inline-block text-center"
+              >
+                Télécharger l'App
+              </a>
               </div>
 
             </div>
