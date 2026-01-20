@@ -43,7 +43,7 @@ export function Download() {
             {/* INSTAGRAM */}
             <SocialBtn 
               icon={Instagram} 
-              link="https://www.instagram.com/fly_with_piaf/" 
+              link="https://www.instagram.com/team_piaf/" 
               label="Instagram" 
             />
             
