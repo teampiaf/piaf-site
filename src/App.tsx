@@ -15,34 +15,41 @@ export function App() {
   }
 
   // 2. PAGE D'ACCUEIL
-  <header className="relative w-full">
-  <div className="w-full h-[140px] md:h-[225px]">
-    <img src="/images/banderole2.png" alt="Banderole PIAF" className="w-full h-full object-cover" />
-  </div>
+  return (
+    <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.16)_0%,_rgba(239,252,246,1)_45%,_rgba(255,255,255,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+      {/* HEADER */}
+      <header className="relative w-full">
+        <div className="w-full h-[140px] md:h-[225px]">
+          <img
+            src="/images/banderole2.png"
+            alt="Banderole PIAF"
+            className="w-full h-full object-cover"
+          />
+        </div>
 
-  <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
-    <div className="w-full max-w-7xl mx-auto flex justify-end">
-      <div className="flex gap-4 md:gap-12 items-center mt-6 md:mt-20 md:-mr-24">
-        <a
-          href="mailto:piaf.contact@gmail.com"
-          className="hidden md:block bg-white text-[#4AA171] font-bold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
-        >
-          Contact
-        </a>
+        <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
+          <div className="w-full max-w-7xl mx-auto flex justify-end">
+            <div className="flex gap-4 md:gap-12 items-center mt-6 md:mt-20 md:-mr-24">
+              <a
+                href="mailto:piaf.contact@gmail.com"
+                className="hidden md:block bg-white/70 backdrop-blur-md text-[#4AA171] font-bold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 border border-white/30"
+              >
+                Contact
+              </a>
 
-        <a
-          href="/download"
-          className="bg-[#4AA171] text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center"
-        >
-          Télécharger
-        </a>
-      </div>
-    </div>
-  </div>
-</header>
+              <a
+                href="/download"
+                className="bg-[#4AA171] text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center"
+              >
+                Télécharger
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
 
       {/* CONTENU PRINCIPAL */}
-       <main className="space-y-8 md:space-y-16 pb-16">
+      <main className="space-y-8 md:space-y-16 pb-16">
         <Hero />
         <Features />
         <ProductShowcase />
@@ -74,7 +81,10 @@ export function App() {
         <div className="max-w-7xl mx-auto border-t border-white/30 pt-12 flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© 2026 PIAF - Parcours Interactifs Accessibles Facilement.</p>
           <div className="flex gap-4">
-            <a href="mailto:support@piaf-app.fr" className="hover:text-[#4AA171]">
+            <a
+              href="mailto:support@piaf-app.fr"
+              className="hover:text-[#4AA171]"
+            >
               Support
             </a>
             <span className="text-gray-300">|</span>
