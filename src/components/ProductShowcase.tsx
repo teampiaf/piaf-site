@@ -59,7 +59,7 @@ export function ProductShowcase() {
               {/* CONTENEUR D'ANIMATION (Rotation légère) */}
               <div className="relative w-full max-w-md transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
               <img 
-                src="../images/mockup_3D_navigation.png" 
+                src="/images/mockup_3D_navigation.png" 
                 alt="Interface Application PIAF" 
                 className="w-full h-auto object-contain" 
               />
