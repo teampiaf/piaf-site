@@ -16,7 +16,7 @@ export function App() {
   const path = window.location.pathname;
 
   return (
-    <div className="min-h-screen w-full overflow-x-hidden bg-relief font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+    <div className="min-h-screen w-full overflow-x-hidden site-bg site-noise font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       {path === "/download" ? (
         <Download />
       ) : (
