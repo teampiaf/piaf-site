@@ -12,14 +12,23 @@
 }
 
 /* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
 
-
-
+/* ✅ Maintenant tu peux utiliser @layer utilities sans erreur */
 @layer utilities {
+  .glass-strong {
+    @apply bg-white/18 backdrop-blur-2xl backdrop-saturate-150 border border-white/25 ring-1 ring-white/10 shadow-2xl shadow-[#4AA171]/10;
+  }
+  .glass {
+    @apply bg-white/12 backdrop-blur-xl backdrop-saturate-150 border border-white/20 ring-1 ring-white/10 shadow-xl shadow-[#4AA171]/8;
+  }
+  .glass-soft {
+    @apply bg-white/8 backdrop-blur-lg backdrop-saturate-150 border border-white/15 ring-1 ring-white/10;
+  }
+
   @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-28px); }
@@ -28,6 +37,5 @@
     animation: float 3.2s ease-in-out infinite;
   }
 }
-
 
 
