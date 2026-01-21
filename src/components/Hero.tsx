@@ -19,8 +19,8 @@ export function Hero() {
           <div className="relative z-10 max-w-3xl">
             
             {/* Badge "Vainqueur" */}
-            <span className="inline-block px-4 py-2 rounded-full glass-chip text-[#4AA171] font-bold text-sm mb-6 tracking-wide">
-              🏆 Vainqueur Challenge Innovation Sécurité Routière 2025
+            <span className="inline-block px-4 py-2 rounded-full bg-white/35 backdrop-blur-md text-[#4AA171] font-bold text-sm mb-6 tracking-wide border border-[#4AA171]/50 ring-1 ring-[#4AA171]/15 shadow-md shadow-black/10 -translate-y-0.5">
+            🏆 Vainqueur Challenge Innovation Sécurité Routière 2025
             </span>
 
             {/* Titre Principal */}
