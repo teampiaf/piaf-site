@@ -1,15 +1,4 @@
 /* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
-@layer utilities {
-  .glass-strong {
-    @apply bg-white/18 backdrop-blur-2xl backdrop-saturate-150 border border-white/25 ring-1 ring-white/10 shadow-2xl shadow-[#4AA171]/10;
-  }
-  .glass {
-    @apply bg-white/12 backdrop-blur-xl backdrop-saturate-150 border border-white/20 ring-1 ring-white/10 shadow-xl shadow-[#4AA171]/8;
-  }
-  .glass-soft {
-    @apply bg-white/8 backdrop-blur-lg backdrop-saturate-150 border border-white/15 ring-1 ring-white/10;
-  }
-}
 
 /* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
 @tailwind base;
@@ -17,14 +6,16 @@
 @tailwind utilities;
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
 
-
+/* ✅ UTILITIES CUSTOM (glass + animations) */
 @layer utilities {
   .glass-strong {
     @apply bg-white/25 backdrop-blur-2xl backdrop-saturate-150 border border-white/30 ring-1 ring-white/10 shadow-2xl;
   }
+
   .glass {
     @apply bg-white/20 backdrop-blur-xl backdrop-saturate-150 border border-white/25 ring-1 ring-white/10 shadow-xl;
   }
+
   .glass-soft {
     @apply bg-white/10 backdrop-blur-lg backdrop-saturate-150 border border-white/20 ring-1 ring-white/10;
   }
@@ -33,8 +24,8 @@
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-28px); }
   }
+
   .animate-float {
     animation: float 3.2s ease-in-out infinite;
   }
 }
-
