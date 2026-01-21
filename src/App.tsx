@@ -68,7 +68,7 @@ export function App() {
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn
             icon={Instagram}
-            link="https://www.instagram.com/fly_with_piaf/"
+            link="https://www.instagram.com/team_piaf/"
             label="Instagram"
           />
           <SocialFooterBtn

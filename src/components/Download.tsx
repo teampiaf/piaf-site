@@ -38,7 +38,7 @@ export function Download() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <SocialBtn icon={Instagram} link="https://www.instagram.com/fly_with_piaf/" label="Instagram" />
+            <SocialBtn icon={Instagram} link="https://www.instagram.com/team_piaf/" label="Instagram" />
             <SocialBtn icon={Linkedin} link="https://www.linkedin.com/in/team-piaf" label="LinkedIn" />
             <SocialBtn icon={TikTokIcon} link="https://www.tiktok.com/@fly_with_piaf" label="TikTok" />
           </div>
