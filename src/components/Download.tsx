@@ -68,7 +68,7 @@ export function Download() {
 
       </div>
       
-      <p className="mt-12 text-gray-400 text-sm">© 2026 PIAF - Stay Tuned.</p>
+      <p className="mt-12 text-gray-400 text-sm">© 2026 PIAF - Cui Cui. </p>
     </div>
   );
 }
