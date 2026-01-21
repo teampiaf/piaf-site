@@ -84,7 +84,8 @@ export function App() {
         </div>
 
         {/* LIGNE DE SÉPARATION & COPYRIGHT */}
-        <div className="max-w-7xl mx-auto pt-12 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="max-w-7xl mx-auto border-t border-white/30 pt-12 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p>© 2026 PIAF App - Parcours Interactifs Accessibles Facilement </p>
           <div className="flex gap-4">
             <a
               href="mailto:support@piaf-app.fr"

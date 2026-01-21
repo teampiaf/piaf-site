@@ -45,7 +45,7 @@ export function Download() {
         </div>
       </div>
 
-      <p className="mt-10 md:mt-12 text-gray-600/70 text-sm">© 2026 PIAF - Cui Cui.</p>
+      <p className="mt-10 md:mt-12 text-gray-600/70 text-sm">© 2026 PIAF App - Cui Cui </p>
     </div>
   );
 }
