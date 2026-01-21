@@ -78,9 +78,39 @@ html, body {
   animation: float 3.2s ease-in-out infinite;
 }
 
+/* APRÈS : fond relief + noise */
+.bg-relief {
+  /* Fond beige/vert en couches (pro + moins plat) */
+  background:
+    radial-gradient(1100px circle at 18% 0%, rgba(74,161,113,0.22) 0%, rgba(74,161,113,0.0) 55%),
+    radial-gradient(900px circle at 85% 18%, rgba(249,247,242,0.95) 0%, rgba(249,247,242,0.0) 60%),
+    radial-gradient(700px circle at 35% 85%, rgba(74,161,113,0.14) 0%, rgba(74,161,113,0.0) 58%),
+    linear-gradient(180deg, #F7F3E8 0%, #ECF8F1 55%, #F9FBF8 100%);
+}
 
-/* src/index.css */
-/* AJOUTE ÇA TOUT EN BAS (sans toucher à tes imports Tailwind) */
+/* Texture "grain" très légère (style iOS/Samsung glass) */
+.bg-relief::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.018) 0px, rgba(0,0,0,0.018) 1px, transparent 1px, transparent 2px),
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.014) 0px, rgba(0,0,0,0.014) 1px, transparent 1px, transparent 3px);
+  opacity: 0.6;
+  mix-blend-mode: soft-light;
+}
+
+/* Vignette ultra douce (donne du relief, évite l’effet “plat”) */
+.bg-relief::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(1200px circle at 50% 30%, rgba(255,255,255,0.35) 0%, rgba(0,0,0,0.06) 70%, rgba(0,0,0,0.10) 100%);
+  opacity: 0.35;
+}
+
 
 /* Empêche tout scroll horizontal (bande blanche à droite) */
 html, body {

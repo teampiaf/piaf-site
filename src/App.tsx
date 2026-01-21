@@ -19,11 +19,8 @@ export function App() {
 
   // 2. PAGE D'ACCUEIL
   return (
-  // src/App.tsx
-// APRÈS (beige/vert + homogène)
-<div className="min-h-screen w-full overflow-x-hidden bg-[radial-gradient(1100px_circle_at_18%_0%,rgba(74,161,113,0.18),transparent_55%),radial-gradient(900px_circle_at_85%_20%,rgba(249,247,242,0.95),transparent_60%),linear-gradient(180deg,#F7F4EA_0%,#ECF8F1_55%,#F9FBF8_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
-
-    
+    <div className="min-h-screen w-full overflow-x-hidden bg-relief font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+      
     {/* FOND GLOBAL (évite la “cassure” entre sections) */}
     <div className="pointer-events-none absolute inset-0 -z-10">
       <Blob className="top-0 left-0 w-[38rem] h-[38rem] bg-[#4AA171]/10 -translate-x-1/3 -translate-y-1/3" />
