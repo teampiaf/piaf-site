@@ -9,19 +9,19 @@ const team = [
   {
     name: 'Orion Prudhomme',
     role: 'Président',
-    color: 'bg-green-300',
+    color: 'bg-green-200',
     image: '/images/orion.png',
   },
   {
     name: 'Rafaël Racz',
     role: 'Vice-Président',
-    color: 'bg-purple-300',
+    color: 'bg-pink-500',
     image: '/images/rafael.png',
   },
   {
     name: 'Haitam Grine',
     role: 'Secrétaire',
-    color: 'bg-black',
+    color: 'bg-neutral-900',
     image: '/images/haitam.png',
   },
   {
