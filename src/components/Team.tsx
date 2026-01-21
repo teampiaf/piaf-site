@@ -9,7 +9,7 @@ const team = [
   {
     name: 'Orion Prudhomme',
     role: 'Président',
-    color: 'bg-green-200',
+    color: 'bg-green-400',
     image: '/images/orion.png',
   },
   {

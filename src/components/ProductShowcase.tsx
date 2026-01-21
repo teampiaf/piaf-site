@@ -12,7 +12,7 @@ export function ProductShowcase() {
             overflow-hidden : Coupe tout ce qui dépasse (les cercles flous)
         ========================================= */}
 
-        <div className="relative bg-[#4AA171] rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 overflow-hidden text-white shadow-2xl shadow-[#4AA171]/20">
+        <div className="relative bg-[#4AA171]/70 backdrop-blur-xl rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 overflow-hidden text-white shadow-2xl shadow-[#4AA171]/20">
           
           {/* DÉCORATIONS D'ARRIÈRE-PLAN (Lumières floues) */}
           <div className="absolute top-0 right-0 w-[35rem] h-[35rem] bg-yellow-100 opacity-20 mix-blend-overlay rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3" />
