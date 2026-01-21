@@ -37,18 +37,19 @@ export function App() {
           />
         </div>
 
-        <div className="absolute inset-2 px-4 md:px-8 flex justify-end items-start">
+        <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
             <div className="flex flex-col md:flex-row gap-3 md:gap-12 items-end mt-3 md:mt-20">
               <a
                 href="mailto:piaf.contact@gmail.com"
-                className="hidden md:block bg-white/55 backdrop-blur-md text-[#4AA171] font-bold px-6 py-3 rounded-full border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12 transition-all hover:-translate-y-0.5"
+                className="bg-white/55 backdrop-blur-md text-[#4AA171] font-bold px-4 py-2 md:px-6 md:py-3 rounded-full border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12 transition-all hover:-translate-y-0.5 text-sm md:text-base"
               >
                 Contact
               </a>
+
               <a
                 href="/download"
-                className="bg-[#4AA171]/90 backdrop-blur-md text-white px-6 py-3 rounded-full font-bold border border-white/25 shadow-xl shadow-black/12 ring-2 ring-white/25 hover:bg-[#4AA171] hover:shadow-2xl hover:shadow-black/16 transition-all hover:-translate-y-0.5 inline-block text-center"
+                className="bg-[#4AA171]/90 backdrop-blur-md text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold border border-white/25 shadow-xl shadow-black/12 ring-2 ring-white/25 hover:bg-[#4AA171] hover:shadow-2xl hover:shadow-black/16 transition-all hover:-translate-y-0.5 inline-block text-center text-sm md:text-base"
               >
                 Télécharger
               </a>
