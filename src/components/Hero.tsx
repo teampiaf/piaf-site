@@ -37,7 +37,7 @@ export function Hero() {
 
             {/* Paragraphe */}
             <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed max-w-2xl">
-              PIAF rend la ville accessible à tous. Une application GPS communautaire couplée à un kit de capteurs intelligent pour détecter les obstacles invisibles.
+              PIAF rend la ville accessible à tous. Un GPS communautaire pensé pour l’autonomie : itinéraires plus fluides, signalements en temps réel et trajets plus sûrs au quotidien.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
