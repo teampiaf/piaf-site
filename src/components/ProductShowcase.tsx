@@ -60,8 +60,6 @@ export function ProductShowcase() {
             {/* --------------------------------------
                 COLONNE DROITE : IMAGE APPLICATION
             -------------------------------------- */}
-              // src/components/ProductShowcase.tsx
-// APRÈS (float animé partout + hover conserve un petit effet desktop)
             <div className="relative flex justify-center lg:justify-end">
               {/* Animation globale (marche sur mobile aussi) */}
               <div className="relative w-full max-w-md animate-float">
