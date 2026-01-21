@@ -41,18 +41,23 @@ export function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              
-              {/* Bouton 1 : Scroll vers le bas de la page */}
-              {/* Remplace '#le-projet' par l'ID de la section où tu veux aller */}
-              <a href="#le-projet" className="no-underline"> 
-                <Button icon>Découvrir le projet</Button>
+              <a href="#le-projet" className="no-underline">
+                <Button
+                  icon
+                  className="bg-[#4AA171]/85 backdrop-blur-md border border-white/25 shadow-lg shadow-black/10 hover:bg-[#4AA171]/95 hover:shadow-xl hover:shadow-black/15"
+                >
+                  Découvrir le projet
+                </Button>
               </a>
 
-              {/* Bouton 2 : Scroll vers une autre section ou page externe */}
               <a href="#comment-ca-marche" className="no-underline">
-                <Button variant="secondary">Comment ça marche ?</Button>
+                <Button
+                  variant="secondary"
+                  className="bg-white/55 backdrop-blur-md border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12"
+                >
+                  Comment ça marche ?
+                </Button>
               </a>
-
             </div>
             {/* --------------------------------------------- */}
 
