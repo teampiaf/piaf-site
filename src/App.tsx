@@ -19,7 +19,10 @@ export function App() {
 
   // 2. PAGE D'ACCUEIL
   return (
-  <div className="min-h-screen w-full overflow-x-hidden bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.18)_0%,_rgba(239,252,246,1)_42%,_rgba(246,252,248,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+  // src/App.tsx
+// APRÈS (beige/vert + homogène)
+<div className="min-h-screen w-full overflow-x-hidden bg-[radial-gradient(1100px_circle_at_18%_0%,rgba(74,161,113,0.18),transparent_55%),radial-gradient(900px_circle_at_85%_20%,rgba(249,247,242,0.95),transparent_60%),linear-gradient(180deg,#F7F4EA_0%,#ECF8F1_55%,#F9FBF8_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+
     
     {/* FOND GLOBAL (évite la “cassure” entre sections) */}
     <div className="pointer-events-none absolute inset-0 -z-10">
@@ -66,7 +69,8 @@ export function App() {
       </main>
 
       {/* PIED DE PAGE (FOOTER) */}
-      <footer className="bg-white/10 backdrop-blur-2xl backdrop-saturate-150 py-12 px-4 text-center text-gray-500 text-sm border-t border-white/20 ring-1 ring-white/10">
+      <footer className="glass-panel w-full mt-10 py-12 px-4 text-center text-gray-600 text-sm border-t border-white/20">
+
 
         {/* === AJOUT : LES RÉSEAUX SOCIAUX === */}
         <div className="flex justify-center gap-6 mb-10">

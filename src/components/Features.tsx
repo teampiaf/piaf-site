@@ -53,13 +53,13 @@ export function Features() {
           <div 
             key={index} 
             // Design de la carte : Dégradé subtil, bords arrondis, et ombre verte au survol
-            className="group relative glass rounded-[2.5rem] p-6 hover:shadow-2xl hover:shadow-[#4AA171]/12 transition-all duration-500 hover:-translate-y-1"
+            className="group relative glass-card glass-sheen p-8 rounded-[2.5rem] transition-all duration-500 hover:-translate-y-1 overflow-hidden"
             style={{ animationDelay: feature.delay }}
           >
             {/* Le conteneur de l'icône (CARRÉ BLANC)
                Note : J'ai passé la taille à w-20 h-20 (80px) pour que ce soit plus imposant 
             */}
-            <div className="w-20 h-20 glass-soft rounded-2xl flex items-center justify-center mb-6 shadow-sm group-hover:scale-110 transition-transform duration-300 text-[#4AA171]">
+            <div className="w-20 h-20 glass-chip rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 text-[#4AA171]">
               
               {/* L'icône elle-même : taille fixée à 40px */}
               <feature.icon size={40} />

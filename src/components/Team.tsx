@@ -35,7 +35,7 @@ const team = [
 export function Team() {
   return (
     <section className="py-16 px-4 md:px-8 max-w-7xl mx-auto">
-      <div className="glass-strong rounded-[3rem] p-8 md:p-12">
+      <div className="glass-panel glass-sheen rounded-[3rem] p-8 md:p-12">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">La Direction PIAF</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">

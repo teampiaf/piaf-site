@@ -10,7 +10,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         
         {/* LA CARTE PRINCIPALE */}
-        <div className="relative glass-strong rounded-[3rem] p-8 md:p-16 lg:p-24 overflow-hidden">
+        <div className="relative glass-panel glass-sheen rounded-[3rem] p-8 md:p-16 lg:p-24 overflow-hidden">
 
           {/* Cercle décoratif */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[10rem] -mr-10 -mt-10 z-0 overflow-hidden" />
@@ -19,7 +19,7 @@ export function Hero() {
           <div className="relative z-10 max-w-3xl">
             
             {/* Badge "Vainqueur" */}
-            <span className="inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-md text-[#4AA171] font-bold text-sm mb-6 tracking-wide border border-white/25 ring-1 ring-white/10">
+            <span className="inline-block px-4 py-2 rounded-full glass-chip text-[#4AA171] font-bold text-sm mb-6 tracking-wide">
               🏆 Vainqueur Challenge Innovation Sécurité Routière 2025
             </span>
 
