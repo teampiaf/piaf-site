@@ -64,7 +64,7 @@ export function ProductShowcase() {
               {/* Animation globale (marche sur mobile aussi) */}
               <div className="relative w-full max-w-md animate-float">
                 {/* Rotation au hover (desktop) */}
-                <div className="transform rotate-10 hover:rotate-10 transition-transform duration-500 ease-out">
+                <div className="transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
                   <img
                     src="/images/mockup_3D_navigation.png"
                     alt="Interface Application PIAF"
