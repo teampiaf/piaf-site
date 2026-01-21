@@ -42,10 +42,12 @@ export function ProductShowcase() {
               {/* Boutons d'action */}
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
               <a
-                href="mailto:piaf.contact@gmail.com"
+                href="https://forms.gle/5ysudY73LuqRFrFi9"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 rounded-full bg-white text-[#4AA171] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1 inline-block text-center"
               >
-                Demander une démo
+                Remplir le questionnaire
               </a>
               <a
                 href="/download"
