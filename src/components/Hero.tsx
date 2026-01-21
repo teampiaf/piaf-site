@@ -10,16 +10,16 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         
         {/* LA CARTE PRINCIPALE */}
-        <div className="relative bg-white/35 backdrop-blur-xl rounded-[3rem] p-8 md:p-16 lg:p-24 shadow-2xl shadow-[#4AA171]/10 border border-white/30 ring-1 ring-white/15 overflow-hidden">
+        <div className="relative glass-strong rounded-[3rem] p-8 md:p-16 lg:p-24 overflow-hidden">
 
           {/* Cercle décoratif */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#F9F7F2] to-white rounded-bl-[10rem] -mr-10 -mt-10 z-0" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[10rem] -mr-10 -mt-10 z-0" />
 
           {/* CONTENU TEXTE */}
           <div className="relative z-10 max-w-3xl">
             
             {/* Badge "Vainqueur" */}
-            <span className="inline-block px-4 py-2 rounded-full bg-[#F9F7F2] text-[#4AA171] font-bold text-sm mb-6 tracking-wide border border-[#4AA171]/10">
+            <span className="inline-block px-4 py-2 rounded-full bg-white/20 backdrop-blur-md text-[#4AA171] font-bold text-sm mb-6 tracking-wide border border-white/25 ring-1 ring-white/10">
               🏆 Vainqueur Challenge Innovation Sécurité Routière 2025
             </span>
 

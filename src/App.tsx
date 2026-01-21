@@ -66,7 +66,7 @@ export function App() {
       </main>
 
       {/* PIED DE PAGE (FOOTER) */}
-      <footer className="bg-white/25 backdrop-blur-xl py-12 px-4 text-center text-gray-500 text-sm border-t border-white/30">
+      <footer className="bg-white/10 backdrop-blur-2xl backdrop-saturate-150 py-12 px-4 text-center text-gray-500 text-sm border-t border-white/20 ring-1 ring-white/10">
 
         {/* === AJOUT : LES RÉSEAUX SOCIAUX === */}
         <div className="flex justify-center gap-6 mb-10">
@@ -122,7 +122,7 @@ function SocialFooterBtn({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-white/35 backdrop-blur-md text-gray-600 hover:bg-[#4AA171] hover:text-white transition-all duration-300 border border-white/25"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-white/14 backdrop-blur-xl backdrop-saturate-150 text-gray-600 hover:bg-[#4AA171]/90 hover:text-white transition-all duration-300 border border-white/20 ring-1 ring-white/10"
       aria-label={label}
     >
       <Icon className="w-5 h-5" />
