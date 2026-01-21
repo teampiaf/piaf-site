@@ -15,7 +15,7 @@ export function Download() {
         <ArrowLeft className="text-gray-700 group-hover:text-[#4AA171]" />
       </a>
 
-      <div className="max-w-2xl w-full bg-white/18 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] p-10 md:p-12 shadow-2xl shadow-black/10 border border-white/25">
+      <div className="max-w-2xl w-full bg-white/16 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-10 md:p-12 shadow-2xl shadow-black/10 border border-white/25">
         <div className="w-24 h-24 bg-white/18 backdrop-blur-xl rounded-full flex items-center justify-center mx-auto mb-8">
           <span className="text-5xl">🚀</span>
         </div>

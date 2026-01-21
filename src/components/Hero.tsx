@@ -10,7 +10,7 @@ export function Hero() {
       <div className="max-w-7xl mx-auto">
         
         {/* LA CARTE PRINCIPALE */}
-        <div className="relative glass-panel glass-sheen rounded-[3rem] p-8 md:p-16 lg:p-24 overflow-hidden">
+        <div className="relative bg-white/18 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-8 md:p-16 lg:p-24 shadow-2xl shadow-black/10 border border-white/25 overflow-hidden">
 
           {/* Cercle décoratif */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[10rem] -mr-10 -mt-10 z-0 overflow-hidden" />
