@@ -12,7 +12,7 @@ const features = [
   },
   {
     title: 'Détection Obstacles',
-    description: 'Ne subissez plus les obstacles. Détectez-les avant l\'impact grâce à notre kit de capteurs complet.',
+    description: "Anticipez au lieu de subir. PIAF vous alerte grâce aux signalements et à l’historique des zones à risque, pour éviter les mauvaises surprises.",
     icon: Zap, // Icone Éclair pour la rapidité/technologie
     delay: '100ms' // Petit délai pour l'effet "cascade"
   },

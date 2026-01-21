@@ -36,7 +36,7 @@ export function ProductShowcase() {
               
               {/* Paragraphe */}
               <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-lg">
-                Combinez la puissance de notre application communautaire avec le kit de capteurs à installer sur votre fauteuil. Détectez, signalez et évitez les obstacles en temps réel.
+                PIAF est votre copilote urbain : une navigation adaptée, des signalements en temps réel et des itinéraires plus fluides pour retrouver une autonomie totale au quotidien.
               </p>
               
               {/* Boutons d'action */}
