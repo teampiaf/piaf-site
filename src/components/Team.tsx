@@ -21,7 +21,7 @@ const team = [
   {
     name: 'Haitam Grine',
     role: 'Secrétaire',
-    color: 'bg-black-300',
+    color: 'bg-black',
     image: '/images/haitam.png',
   },
   {
