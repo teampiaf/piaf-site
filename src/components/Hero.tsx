@@ -4,7 +4,7 @@ import { Button } from './ui/Button';
 
 export function Hero() {
   return (
-      <section className="relative w-full px-4 pb-8 pt-0 overflow-hidden">
+      <section className="relative w-full px-4 pb-8 pt-6 md:pt-10 overflow-hidden">
 
       {/* Fond de couleur */}
       <div className="max-w-7xl mx-auto">

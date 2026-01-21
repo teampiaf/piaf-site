@@ -61,7 +61,7 @@ export function App() {
           </main>
 
           {/* FOOTER */}
-          <footer className="bg-white py-12 px-4 text-center text-gray-400 text-sm">
+          <footer className="bg-transparent py-12 px-4 text-center text-gray-400 text-sm">
 
 
         {/* === AJOUT : LES RÉSEAUX SOCIAUX === */}
@@ -84,8 +84,7 @@ export function App() {
         </div>
 
         {/* LIGNE DE SÉPARATION & COPYRIGHT */}
-        <div className="max-w-7xl mx-auto border-t border-white/30 pt-12 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p>© 2026 PIAF - Parcours Interactifs Accessibles Facilement.</p>
+        <div className="max-w-7xl mx-auto pt-12 flex flex-col md:flex-row justify-between items-center gap-4">
           <div className="flex gap-4">
             <a
               href="mailto:support@piaf-app.fr"
