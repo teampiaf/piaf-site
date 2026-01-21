@@ -44,7 +44,7 @@ export function Hero() {
               <a href="#le-projet" className="no-underline">
                 <Button
                   icon
-                  className="bg-[#4AA171]/85 backdrop-blur-md border border-white/25 shadow-lg shadow-black/10 hover:bg-[#4AA171]/95 hover:shadow-xl hover:shadow-black/15"
+                  className="px-8 py-4 rounded-full bg-[#4AA171]/85 backdrop-blur-md border border-white/25 text-white font-medium shadow-lg shadow-black/12 hover:bg-[#4AA171]/95 hover:shadow-xl hover:shadow-black/15 transition-all transform hover:-translate-y-0.5 inline-block text-center"
                 >
                   Découvrir le projet
                 </Button>
@@ -53,7 +53,7 @@ export function Hero() {
               <a href="#comment-ca-marche" className="no-underline">
                 <Button
                   variant="secondary"
-                  className="bg-white/55 backdrop-blur-md border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12"
+                  className="px-8 py-4 rounded-full bg-white/55 backdrop-blur-md text-[#4AA171] font-bold text-lg border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12 transition-all transform hover:-translate-y-0.5 inline-block text-center"
                 >
                   Comment ça marche ?
                 </Button>
