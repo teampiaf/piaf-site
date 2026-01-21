@@ -37,18 +37,18 @@ export function App() {
           />
         </div>
 
-        <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
+        <div className="absolute inset-2 px-4 md:px-8 flex justify-end items-start">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
             <div className="flex flex-col md:flex-row gap-3 md:gap-12 items-end mt-3 md:mt-20">
               <a
                 href="mailto:piaf.contact@gmail.com"
-                className="bg-white/70 backdrop-blur-md text-[#4AA171] font-bold px-4 py-2 md:px-6 md:py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 border border-white/30 text-sm md:text-base"
+                className="hidden md:block bg-white/55 backdrop-blur-md text-[#4AA171] font-bold px-6 py-3 rounded-full border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12 transition-all hover:-translate-y-0.5"
               >
                 Contact
               </a>
               <a
                 href="/download"
-                className="bg-[#4AA171] text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-2 md:ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center text-sm md:text-base"
+                className="bg-[#4AA171]/90 backdrop-blur-md text-white px-6 py-3 rounded-full font-bold border border-white/25 shadow-xl shadow-black/12 ring-2 ring-white/25 hover:bg-[#4AA171] hover:shadow-2xl hover:shadow-black/16 transition-all hover:-translate-y-0.5 inline-block text-center"
               >
                 Télécharger
               </a>
@@ -123,7 +123,7 @@ function SocialFooterBtn({
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="w-10 h-10 flex items-center justify-center rounded-full bg-white/14 backdrop-blur-xl backdrop-saturate-150 text-gray-600 hover:bg-[#4AA171]/90 hover:text-white transition-all duration-300 border border-white/20 ring-1 ring-white/10"
+      className="w-10 h-10 flex items-center justify-center rounded-full bg-white/35 backdrop-blur-md border border-white/30 text-gray-600 shadow-sm shadow-black/10 hover:bg-[#4AA171]/90 hover:text-white hover:shadow-md transition-all duration-300"
       aria-label={label}
     >
       <Icon className="w-5 h-5" />

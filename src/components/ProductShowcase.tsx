@@ -45,13 +45,13 @@ export function ProductShowcase() {
                 href="https://forms.gle/5ysudY73LuqRFrFi9"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 py-4 rounded-full bg-white text-[#4AA171] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1 inline-block text-center"
+                className="px-8 py-4 rounded-full bg-white/55 backdrop-blur-md text-[#4AA171] font-bold text-lg border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12 transition-all transform hover:-translate-y-0.5 inline-block text-center"
               >
                 Remplir le questionnaire
               </a>
               <a
                 href="/download"
-                className="px-8 py-4 rounded-full bg-[#4AA171] border-2 border-white/30 text-white font-medium hover:bg-white/10 transition-colors inline-block text-center"
+                className="px-8 py-4 rounded-full bg-[#4AA171]/85 backdrop-blur-md border border-white/25 text-white font-medium shadow-lg shadow-black/12 hover:bg-[#4AA171]/95 hover:shadow-xl hover:shadow-black/15 transition-all transform hover:-translate-y-0.5 inline-block text-center"
               >
                 Télécharger l'App
               </a>
