@@ -60,15 +60,22 @@ export function ProductShowcase() {
             {/* --------------------------------------
                 COLONNE DROITE : IMAGE APPLICATION
             -------------------------------------- */}
-              <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-[20rem] sm:max-w-md md:max-w-lg lg:max-w-xl transform rotate-5 hover:rotate-0 transition-transform duration-500 ease-out">
-                <img
-                  src="/images/mockup_3D_navigation.png"
-                  alt="Interface Application PIAF"
-                  className="w-full h-auto object-contain"
-                />
+              // src/components/ProductShowcase.tsx
+// APRÈS (float animé partout + hover conserve un petit effet desktop)
+            <div className="relative flex justify-center lg:justify-end">
+              {/* Animation globale (marche sur mobile aussi) */}
+              <div className="relative w-full max-w-md animate-float">
+                {/* Rotation au hover (desktop) */}
+                <div className="transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
+                  <img
+                    src="/images/mockup_3D_navigation.png"
+                    alt="Interface Application PIAF"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
               </div>
             </div>
+
 
             
           </div> {/* Fin de la grille */}

@@ -5,3 +5,16 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
+
+/* src/index.css */
+/* APRÈS : ajoute ça tout en bas (sans supprimer tes commentaires/imports) */
+
+@layer utilities {
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+  }
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+}
