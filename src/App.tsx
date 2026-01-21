@@ -19,7 +19,7 @@ export function App() {
 
   // 2. PAGE D'ACCUEIL
   return (
-  <div className="min-h-screen bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.18)_0%,_rgba(239,252,246,1)_42%,_rgba(246,252,248,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+  <div className="min-h-screen w-full overflow-x-hidden bg-[radial-gradient(ellipse_at_top,_rgba(74,161,113,0.18)_0%,_rgba(239,252,246,1)_42%,_rgba(246,252,248,1)_100%)] font-sans selection:bg-gray-50 selection:text-[#4AA171]">
     
     {/* FOND GLOBAL (évite la “cassure” entre sections) */}
     <div className="pointer-events-none absolute inset-0 -z-10">

@@ -29,3 +29,17 @@
     animation: float 3.2s ease-in-out infinite;
   }
 }
+
+/* src/index.css */
+/* AJOUTE ÇA TOUT EN BAS (sans toucher à tes imports Tailwind) */
+
+/* Empêche tout scroll horizontal (bande blanche à droite) */
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  overflow-x: hidden;
+}
