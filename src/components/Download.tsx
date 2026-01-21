@@ -37,7 +37,7 @@ export function Download() {
             Suivez l'avancée du projet sur
           </p>
 
-          <div className="flex flex-col sm:flex-row justify-center gap-4">
+          <div className="flex items-center justify-center gap-3 px-6 py-3 bg-white/30 backdrop-blur-xl border border-white/30 text-gray-800 rounded-xl shadow-md shadow-black/10 hover:bg-white/40 hover:shadow-lg hover:shadow-black/12 hover:text-[#4AA171] transition-all duration-300 transform hover:-translate-y-0.5">
             <SocialBtn icon={Instagram} link="https://www.instagram.com/team_piaf/" label="Instagram" />
             <SocialBtn icon={Linkedin} link="https://www.linkedin.com/in/team-piaf" label="LinkedIn" />
             <SocialBtn icon={TikTokIcon} link="https://www.tiktok.com/@fly_with_piaf" label="TikTok" />
