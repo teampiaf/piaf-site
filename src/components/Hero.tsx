@@ -13,7 +13,7 @@ export function Hero() {
         <div className="relative glass-strong rounded-[3rem] p-8 md:p-16 lg:p-24 overflow-hidden">
 
           {/* Cercle décoratif */}
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[10rem] -mr-10 -mt-10 z-0" />
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-bl-[10rem] -mr-10 -mt-10 z-0 overflow-hidden" />
 
           {/* CONTENU TEXTE */}
           <div className="relative z-10 max-w-3xl">
@@ -40,7 +40,6 @@ export function Hero() {
               PIAF rend la ville accessible à tous. Une application GPS communautaire couplée à un kit de capteurs intelligent pour détecter les obstacles invisibles.
             </p>
 
-            {/* --- C'EST ICI QUE J'AI CORRIGÉ LES LIENS --- */}
             <div className="flex flex-col sm:flex-row gap-4">
               
               {/* Bouton 1 : Scroll vers le bas de la page */}

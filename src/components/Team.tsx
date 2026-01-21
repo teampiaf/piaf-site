@@ -15,19 +15,19 @@ const team = [
   {
     name: 'Rafaël Racz',
     role: 'Vice-Président',
-    color: 'bg-blue-200',
+    color: 'bg-pink-200',
     image: '/images/rafael.png',
   },
   {
     name: 'Haitam Grine',
     role: 'Secrétaire',
-    color: 'bg-purple-200',
+    color: 'bg-grey-200',
     image: '/images/haitam.png',
   },
   {
     name: 'Julien Aprin',
     role: 'Trésorier',
-    color: 'bg-orange-200', // Orange : Dynamisme / Gestion
+    color: 'bg-blue-200', 
     image: '/images/julien.png',
   },
 ];
