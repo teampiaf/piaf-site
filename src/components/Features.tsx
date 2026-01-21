@@ -33,7 +33,7 @@ const features = [
 export function Features() {
   return (
     // Section principale avec marge verticale (py-20) et centrée
-    <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto">
+    <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
       
       {/* En-tête de la section : Titre + Sous-titre */}
       <div className="text-center mb-16">

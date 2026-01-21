@@ -3,7 +3,7 @@ import React from 'react';
 export function ProductShowcase() {
   return (
     // SECTION PRINCIPALE
-    <section className="py-12 px-4 md:px-8">
+    <section className="py-12 px-4 md:px-8 overflow-hidden">
       <div className="max-w-7xl mx-auto">
         
         {/* =========================================
