@@ -3,20 +3,20 @@ import { ArrowLeft, Instagram, Linkedin } from 'lucide-react';
 import { LINKS } from "../config/links"; // adapte le chemin selon le fichier
 
 
+// src/components/Download.tsx
+// APRÈS (transparent + glass, le fond vient de App)
 export function Download() {
   return (
-    <div className="min-h-screen bg-[#F9F7F2] flex flex-col items-center justify-center p-4 text-center font-sans selection:bg-[#4AA171] selection:text-white">
-      
-      {/* Bouton Retour (Lien interne = pas de https) */}
-      <a href="/" className="absolute top-8 left-8 p-3 rounded-full bg-white shadow-md hover:bg-gray-50 transition-colors group">
-        <ArrowLeft className="text-gray-600 group-hover:text-[#4AA171]" />
+    <div className="min-h-screen relative flex flex-col items-center justify-center p-4 text-center selection:bg-[#4AA171] selection:text-white">
+      <a
+        href="/"
+        className="absolute top-6 left-4 md:top-8 md:left-8 p-3 rounded-full bg-white/35 backdrop-blur-xl border border-white/30 shadow-md shadow-black/10 hover:bg-white/45 transition-colors group"
+      >
+        <ArrowLeft className="text-gray-700 group-hover:text-[#4AA171]" />
       </a>
 
-      {/* Contenu Principal */}
-      <div className="max-w-2xl w-full bg-white/60 backdrop-blur-md rounded-[3rem] p-12 shadow-xl border border-white">
-        
-        {/* Icône Fusée */}
-        <div className="w-24 h-24 bg-[#4AA171]/10 rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
+      <div className="max-w-2xl w-full bg-white/18 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] p-10 md:p-12 shadow-2xl shadow-black/10 border border-white/25">
+        <div className="w-24 h-24 bg-white/18 backdrop-blur-xl rounded-full flex items-center justify-center mx-auto mb-8">
           <span className="text-5xl">🚀</span>
         </div>
 
@@ -24,51 +24,28 @@ export function Download() {
           Ça arrive <span className="text-[#4AA171]">très vite !</span>
         </h1>
 
-        <p className="text-xl text-gray-600 mb-10 leading-relaxed">
-          L'application PIAF est actuellement en cours de finalisation. 
+        <p className="text-xl text-gray-700/90 mb-10 leading-relaxed">
+          L'application PIAF est actuellement en cours de finalisation.
           <br className="hidden md:block" />
           La version <strong>Bêta</strong> sera disponible dans quelques jours sur iOS et Android.
         </p>
 
-        <div className="w-16 h-1 bg-gray-200 rounded-full mx-auto mb-10"></div>
+        <div className="w-16 h-1 bg-white/30 rounded-full mx-auto mb-10"></div>
 
         <div className="space-y-6">
-          <p className="text-sm font-bold text-gray-500 uppercase tracking-widest">
+          <p className="text-sm font-bold text-gray-600 uppercase tracking-widest">
             Suivez l'avancée du projet sur
           </p>
 
-          {/* ============================================================
-              LIENS SOCIAUX (Corrigés avec balise <a> classique)
-          ============================================================ */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            
-            {/* INSTAGRAM */}
-            <SocialBtn 
-              icon={Instagram} 
-              link={LINKS.instagram} 
-              label="Instagram" 
-            />
-            
-            {/* LINKEDIN */}
-            <SocialBtn 
-              icon={Linkedin} 
-              link={LINKS.linkedin}
-              label="LinkedIn" 
-            />
-            
-            {/* TIKTOK */}
-            <SocialBtn 
-              icon={TikTokIcon} 
-              link={LINKS.tiktok}
-              label="TikTok" 
-            />
-
+            <SocialBtn icon={Instagram} link="https://www.instagram.com/fly_with_piaf/" label="Instagram" />
+            <SocialBtn icon={Linkedin} link="https://www.linkedin.com/in/team-piaf" label="LinkedIn" />
+            <SocialBtn icon={TikTokIcon} link="https://www.tiktok.com/@fly_with_piaf" label="TikTok" />
           </div>
         </div>
-
       </div>
-      
-      <p className="mt-12 text-gray-400 text-sm">© 2026 PIAF - Cui Cui. </p>
+
+      <p className="mt-10 md:mt-12 text-gray-600/70 text-sm">© 2026 PIAF - Stay Tuned.</p>
     </div>
   );
 }

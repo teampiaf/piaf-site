@@ -11,31 +11,25 @@ import { Team } from "./components/Team";
 import { Download } from "./components/Download";
 
 export function App() {
+  
   // 1. ROUTAGE SIMPLE
   const path = window.location.pathname;
-  if (path === "/download") {
-    return <Download />;
-  }
 
-  // 2. PAGE D'ACCUEIL
   return (
     <div className="min-h-screen w-full overflow-x-hidden bg-relief font-sans selection:bg-gray-50 selection:text-[#4AA171]">
-      
-    {/* FOND GLOBAL (évite la “cassure” entre sections) */}
-    <div className="pointer-events-none absolute inset-0 -z-10">
-      <Blob className="top-0 left-0 w-[38rem] h-[38rem] bg-[#4AA171]/10 -translate-x-1/3 -translate-y-1/3" />
-      <Blob className="bottom-0 right-0 w-[46rem] h-[46rem] bg-[#E8E4D9]/70 translate-x-1/4 translate-y-1/4" />
-    </div>
-
-      {/* HEADER */}
-      <header className="relative w-full">
-        <div className="w-full h-[140px] md:h-[225px]">
-          <img
-            src="/images/banderole2.png"
-            alt="Banderole PIAF"
-            className="w-full h-full object-cover"
-          />
-        </div>
+      {path === "/download" ? (
+        <Download />
+      ) : (
+        <>
+          {/* HEADER */}
+          <header className="relative w-full">
+            <div className="w-full h-[225px]">
+              <img
+                src="/images/banderole2.png"
+                alt="Banderole PIAF"
+                className="w-full h-full object-cover"
+              />
+            </div>
 
         <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
@@ -59,15 +53,15 @@ export function App() {
       </header>
 
       {/* CONTENU PRINCIPAL */}
-      <main className="space-y-8 md:space-y-16 pb-16 overflow-hidden">
-        <Hero />
-        <Features />
-        <ProductShowcase />
-        <Team />
-      </main>
+          <main className="space-y-8 md:space-y-16 pb-16">
+            <Hero />
+            <Features />
+            <ProductShowcase />
+            <Team />
+          </main>
 
-      {/* PIED DE PAGE (FOOTER) */}
-      <footer className="glass-panel w-full mt-10 py-12 px-4 text-center text-gray-600 text-sm border-t border-white/20">
+          {/* FOOTER */}
+          <footer className="bg-white py-12 px-4 text-center text-gray-400 text-sm">
 
 
         {/* === AJOUT : LES RÉSEAUX SOCIAUX === */}
@@ -105,7 +99,9 @@ export function App() {
             </a>
           </div>
         </div>
-      </footer>
+        </footer>
+        </>
+      )}
     </div>
   );
 }
