@@ -19,6 +19,10 @@ export function App() {
   // 1. ROUTAGE SIMPLE
   const path = window.location.pathname;
 
+  if (path === "/download") return <Download />;
+  if (path === "/projet") return <ProjectPage />;
+  if (path === "/comment-ca-marche") return <HowItWorksPage />;
+
   return (
     <div className="min-h-screen w-full overflow-x-hidden site-bg site-noise font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       {path === "/download" ? (

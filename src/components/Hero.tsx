@@ -40,25 +40,27 @@ export function Hero() {
               PIAF rend la ville accessible à tous. Un GPS communautaire pensé pour l’autonomie : itinéraires plus fluides, signalements en temps réel et trajets plus sûrs au quotidien.
             </p>
 
+            {/*------------- Boutons ------------ */}
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#le-projet" className="no-underline">
-                <Button
-                  icon
-                  className="px-8 py-4 rounded-full bg-[#4AA171]/85 backdrop-blur-md border border-white/25 text-white font-medium shadow-lg shadow-black/12 hover:bg-[#4AA171]/95 hover:shadow-xl hover:shadow-black/15 transition-all transform hover:-translate-y-0.5 inline-block text-center"
-                >
-                  Découvrir le projet
-                </Button>
+              <a
+                href="/projet"
+                className="no-underline inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300 ease-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4AA171] bg-[#4AA171]/85 backdrop-blur-md border border-white/25 text-white shadow-lg shadow-black/10 hover:bg-[#4AA171]/95 hover:shadow-xl hover:shadow-black/15"
+              >
+                Découvrir le projet
+                <span className="ml-2">
+                  {/* petite flèche simple, sans dépendre du Button */}
+                  →
+                </span>
               </a>
 
-              <a href="#comment-ca-marche" className="no-underline">
-                <Button
-                  variant="secondary"
-                  className="px-8 py-4 rounded-full bg-white/55 backdrop-blur-md text-[#4AA171] font-bold text-lg border border-white/40 shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12 transition-all transform hover:-translate-y-0.5 inline-block text-center"
-                >
-                  Comment ça marche ?
-                </Button>
+              <a
+                href="/comment-ca-marche"
+                className="no-underline inline-flex items-center justify-center px-8 py-4 rounded-full font-medium transition-all duration-300 ease-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#4AA171] bg-white/55 backdrop-blur-md border border-white/40 text-[#4AA171] shadow-md shadow-black/10 hover:bg-white/65 hover:shadow-lg hover:shadow-black/12"
+              >
+                Comment ça marche ?
               </a>
             </div>
+
             {/* --------------------------------------------- */}
 
           </div>
