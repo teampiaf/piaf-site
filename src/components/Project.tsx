@@ -36,98 +36,110 @@ export function ProjectPage() {
           <div className="absolute -bottom-24 -left-24 w-[22rem] h-[22rem] bg-emerald-900/15 rounded-full blur-[90px]" />
 
           <div className="relative z-10">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/35 backdrop-blur-xl border border-white/30 text-[#4AA171] font-bold text-sm mb-6 shadow-sm shadow-black/10">
-              <Sparkles className="w-4 h-4" />
-              L’histoire du projet
-            </div>
 
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
-              Découvrir <span className="text-[#4AA171]">PIAF</span>
-            </h1>
-
-            <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
-              PIAF est né d’un constat simple : l’accessibilité en ville peut changer d’une rue à l’autre, et trop souvent
-              on le découvre trop tard. On veut rendre les trajets plus lisibles, plus fluides et plus sûrs au quotidien.
-            </p>
-
-            {/* ========================================================= */}
-            {/* IMAGE PLACEHOLDER #1 (à décommenter plus tard) */}
-            {/* Idée: photo du Challenge / de votre équipe / moment marquant */}
-            {/* 
-            <div className="mt-10 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10">
-              <img
-                src="/images/projet_challenge.jpg"
-                alt="PIAF - Challenge Innovation"
-                className="w-full h-[220px] md:h-[340px] object-cover"
-              />
-            </div>
-            */}
-            {/* ========================================================= */}
-
-            <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
-                <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
-                  <Trophy className="w-5 h-5" />
-                  <h2 className="font-bold text-gray-800">Challenge Innovation</h2>
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  Un accélérateur : retours terrain, cadrage, validation du besoin. Ça a transformé une idée en vraie direction produit.
-                </p>
-              </div>
-
-              <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
-                <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
-                  <HeartHandshake className="w-5 h-5" />
-                  <h2 className="font-bold text-gray-800">Notre motivation</h2>
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  Une démarche humaine : simplifier le quotidien et réduire le stress lié aux imprévus, inspiré par une histoire proche.
-                </p>
-              </div>
-
-              <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
-                <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
-                  <Rocket className="w-5 h-5" />
-                  <h2 className="font-bold text-gray-800">Où on en est</h2>
-                </div>
-                <p className="text-gray-600 leading-relaxed">
-                  On consolide le contenu, on travaille la fiabilité, et on prépare une expérience claire, agréable et utile dès la première utilisation.
-                </p>
-              </div>
-            </div>
-
-            {/* ========================================================= */}
-            {/* IMAGE PLACEHOLDER #2 (à décommenter plus tard) */}
-            {/* Idée: timeline visuelle, carte de Toulouse, ou capture d'un post/présentation */}
-            {/* 
-            <div className="mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <div className="rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 min-h-[220px]" />
-              <div className="rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 min-h-[220px]" />
-            </div>
-            */}
-            {/* ========================================================= */}
-
-            {/* ============================= */}
-            {/* CTA — mêmes boutons que ton cadre vert */}
-            {/* ============================= */}
-            <div className="mt-10 flex flex-col sm:flex-row gap-4 pt-2">
-              <a
-                href="/comment-ca-marche"
-                className="px-8 py-4 rounded-full bg-white text-[#4AA171] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1 inline-block text-center"
-              >
-                Comment ça marche ?
-              </a>
-
-              <a
-                href="/download"
-                className="px-8 py-4 rounded-full bg-[#4AA171] border-2 border-white/30 text-white font-medium hover:bg-white/10 transition-colors inline-block text-center"
-              >
-                Télécharger l'App
-              </a>
-            </div>
-          </div>
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/35 backdrop-blur-xl border border-white/30 text-[#4AA171] font-bold text-sm mb-6 shadow-sm shadow-black/10">
+        <Sparkles className="w-4 h-4" />
+        Notre histoire
         </div>
-      </div>
-    </section>
-  );
-}
+
+        <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
+        Découvrir le projet <span className="text-[#4AA171]">PIAF</span>
+        </h1>
+
+        <p className="mt-6 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
+        PIAF est né d’un projet d’école : dans le cadre de notre spécialité S3E, nous devions imaginer une innovation utile et concrète.
+        Très vite, l’idée a pris une dimension personnelle. Une amie commune à notre équipe a été victime d’un accident de voiture et s’est
+        retrouvée paraplégique. Cet événement nous a profondément marqués — et nous a poussés à réfléchir à une solution qui pourrait réellement
+        faciliter le quotidien des personnes à mobilité réduite.
+        </p>
+
+        <p className="mt-4 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
+        C’est là qu’est apparue l’idée d’un GPS interactif dédié à l’accessibilité : un outil capable d’aider les PMR à se déplacer plus librement,
+        avec moins d’imprévus et plus de sérénité, en s’appuyant sur des informations terrain pertinentes.
+        </p>
+
+        {/* ========================================================= */}
+        {/* IMAGE PLACEHOLDER #1 (à décommenter plus tard) */}
+        {/* Idée: photo équipe / moment fondateur / atelier de travail */}
+        {/*
+        <div className="mt-10 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10">
+        <img
+            src="/images/projet_origine.jpg"
+            alt="Origine du projet PIAF"
+            className="w-full h-[220px] md:h-[340px] object-cover"
+        />
+        </div>
+        */}
+        {/* ========================================================= */}
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
+            <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
+            <Trophy className="w-5 h-5" />
+            <h2 className="font-bold text-gray-800">Le déclic : un concours national</h2>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+            Quelques mois plus tard, nous recevons un appel à projets : un concours d’innovation autour de la sécurité routière,
+            encadré au niveau institutionnel. On se lance sans prétention — à ce stade, ce n’était encore qu’une idée.
+            </p>
+        </div>
+
+        <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
+            <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
+            <HeartHandshake className="w-5 h-5" />
+            <h2 className="font-bold text-gray-800">Du pitch au Top 3</h2>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+            De fil en aiguille, nous avons présenté PIAF en visioconférence devant un jury officiel.
+            Puis l’annonce : nous faisons partie du Top 3 et sommes invités à Paris pour la remise des prix.
+            </p>
+        </div>
+
+    <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
+        <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
+            <Rocket className="w-5 h-5" />
+            <h2 className="font-bold text-gray-800">1er prix & dotation de 12 000€</h2>
+            </div>
+            <p className="text-gray-600 leading-relaxed">
+            À Paris, nous découvrons que nous remportons le 1er prix, accompagné d’une dotation de 12 000€.
+            Ce moment a tout changé : PIAF n’était plus une idée, mais un projet solide à construire.
+            </p>
+        </div>
+    </div>
+
+        {/* ========================================================= */}
+        {/* IMAGE PLACEHOLDER #2 (à décommenter plus tard) */}
+        {/* Idée: photo remise du prix à Paris / scène / trophée */}
+        {/*
+        <div className="mt-10 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10">
+        <img
+            src="/images/projet_paris_prix.jpg"
+            alt="Remise du prix à Paris"
+            className="w-full h-[220px] md:h-[340px] object-cover"
+        />
+        </div>
+        */}
+        {/* ========================================================= */}
+
+        <p className="mt-10 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
+        Depuis, nous développons PIAF avec une ambition claire : proposer une expérience de navigation plus accessible,
+        plus fiable et plus rassurante au quotidien. Notre objectif est simple : permettre à chacun de se déplacer avec confiance,
+        sans que la ville soit un obstacle.
+        </p>
+
+    {/* CTA — mêmes boutons que ton cadre vert */}
+    <div className="mt-10 flex flex-col sm:flex-row gap-4 pt-2">
+        <a
+            href="/comment-ca-marche"
+            className="px-8 py-4 rounded-full bg-white text-[#4AA171] font-bold text-lg shadow-lg hover:shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1 inline-block text-center"
+        >
+            Comment ça marche ?
+        </a>
+
+        <a
+            href="/download"
+            className="px-8 py-4 rounded-full bg-[#4AA171] border-2 border-white/30 text-white font-medium shadow-lg shadow-black/10 hover:shadow-xl hover:shadow-black/15 hover:bg-[#3d8c60] transition-all transform hover:-translate-y-1 inline-block text-center"
+        >
+            Télécharger l'App
+        </a>
+    </div>
