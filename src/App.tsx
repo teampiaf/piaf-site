@@ -1,6 +1,10 @@
 import React from "react";
 import { Blob } from "./components/ui/Blob";
 
+import { ProjectPage } from "./components/ProjectPage";
+import { HowItWorksPage } from "./components/HowItWorksPage";
+
+
 
 // J'importe les icônes nécessaires
 import { Instagram, Linkedin } from "lucide-react";
@@ -54,10 +58,18 @@ export function App() {
 
       {/* CONTENU PRINCIPAL */}
           <main className="space-y-8 md:space-y-16 pb-16">
-            <Hero />
-            <Features />
-            <ProductShowcase />
-            <Team />
+            {path === "/projet" ? (
+              <ProjectPage />
+            ) : path === "/comment-ca-marche" ? (
+              <HowItWorksPage />
+            ) : (
+              <>
+                <Hero />
+                <Features />
+                <ProductShowcase />
+                <Team />
+              </>
+            )}
           </main>
 
           {/* FOOTER */}
