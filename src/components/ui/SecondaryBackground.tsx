@@ -5,20 +5,19 @@ export function SecondaryBackground({
 }: {
   variant?: "project" | "howitworks";
 }) {
-  // Deux variantes proches, mais un peu différentes pour "dynamiser"
   const accent =
     variant === "howitworks"
       ? {
-          a: "from-[#4AA171]/18",
-          b: "via-[#BFE7D2]/25",
-          c: "to-[#F3EFE6]/55",
+          a: "from-[#4AA171]/20",
+          b: "via-[#D9F3E7]/30",
+          c: "to-[#F5F2EA]/70",
           wave1: "#4AA171",
           wave2: "#7FD6AE",
         }
       : {
-          a: "from-[#4AA171]/14",
-          b: "via-[#E8E4D9]/45",
-          c: "to-[#F5F2EA]/65",
+          a: "from-[#4AA171]/15",
+          b: "via-[#E8E4D9]/50",
+          c: "to-[#F5F2EA]/75",
           wave1: "#4AA171",
           wave2: "#9BE3C1",
         };
@@ -37,13 +36,13 @@ export function SecondaryBackground({
       />
 
       {/* Relief : 2 “blobs” flous */}
-      <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-[#4AA171]/15 blur-[90px]" />
-      <div className="absolute -bottom-56 -right-56 h-[620px] w-[620px] rounded-full bg-[#D9F3E7]/35 blur-[110px]" />
+      <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-[#4AA171]/20 blur-[90px]" />
+      <div className="absolute -bottom-56 -right-56 h-[620px] w-[620px] rounded-full bg-[#D9F3E7]/40 blur-[110px]" />
 
       {/* Traits très subtils */}
       <div className="absolute inset-0 opacity-[0.10] [background-image:linear-gradient(to_right,#4AA171_1px,transparent_1px),linear-gradient(to_bottom,#4AA171_1px,transparent_1px)] [background-size:72px_72px]" />
 
-      {/* Vagues (style “flow”) en bas */}
+      {/* Vagues en bas */}
       <svg
         className="absolute -bottom-16 left-1/2 w-[1300px] -translate-x-1/2 opacity-40"
         viewBox="0 0 1200 240"
