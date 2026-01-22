@@ -1,53 +1,77 @@
 import React from "react";
 
-type Variant = "project" | "howitworks" | "download" | "default";
-
-export function SecondaryBackground({ variant = "default" }: { variant?: Variant }) {
-  const base =
-    variant === "project"
-      ? "bg-gradient-to-b from-[#effcf6] via-[#F7F4EA] to-white"
-      : variant === "howitworks"
-      ? "bg-gradient-to-b from-[#E8F5EE] via-[#F7F4EA] to-white"
-      : variant === "download"
-      ? "bg-gradient-to-b from-[#F7F4EA] via-white to-[#effcf6]"
-      : "bg-gradient-to-b from-[#effcf6] via-[#F7F4EA] to-white";
-
-  // Traits : on garde très léger + premium
-  const stripesOpacity = variant === "howitworks" ? 0.22 : 0.18;
+export function SecondaryBackground({
+  variant = "project",
+}: {
+  variant?: "project" | "howitworks";
+}) {
+  // Deux variantes proches, mais un peu différentes pour "dynamiser"
+  const accent =
+    variant === "howitworks"
+      ? {
+          a: "from-[#4AA171]/18",
+          b: "via-[#BFE7D2]/25",
+          c: "to-[#F3EFE6]/55",
+          wave1: "#4AA171",
+          wave2: "#7FD6AE",
+        }
+      : {
+          a: "from-[#4AA171]/14",
+          b: "via-[#E8E4D9]/45",
+          c: "to-[#F5F2EA]/65",
+          wave1: "#4AA171",
+          wave2: "#9BE3C1",
+        };
 
   return (
-    <div className="pointer-events-none absolute inset-0 -z-10">
-      {/* Base */}
-      <div className={`absolute inset-0 ${base}`} />
-
-      {/* Traits diagonaux (très fins) */}
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      {/* Base soft gradient */}
       <div
-        className="absolute inset-0"
-        style={{
-          opacity: stripesOpacity,
-          background:
-            "repeating-linear-gradient(135deg, rgba(74,161,113,0.22) 0px, rgba(74,161,113,0.22) 1px, transparent 1px, transparent 14px)",
-        }}
+        className={[
+          "absolute inset-0",
+          "bg-gradient-to-b",
+          accent.a,
+          accent.b,
+          accent.c,
+        ].join(" ")}
       />
 
-      {/* Deuxième couche de traits plus larges (profondeur) */}
-      <div
-        className="absolute inset-0"
-        style={{
-          opacity: 0.08,
-          background:
-            "repeating-linear-gradient(45deg, rgba(0,0,0,0.10) 0px, rgba(0,0,0,0.10) 1px, transparent 1px, transparent 26px)",
-        }}
-      />
+      {/* Relief : 2 “blobs” flous */}
+      <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-[#4AA171]/15 blur-[90px]" />
+      <div className="absolute -bottom-56 -right-56 h-[620px] w-[620px] rounded-full bg-[#D9F3E7]/35 blur-[110px]" />
 
-      {/* Glows / relief */}
-      <div className="absolute -top-28 left-1/2 h-[520px] w-[980px] -translate-x-1/2 rotate-[-12deg] rounded-full bg-[#4AA171]/12 blur-3xl" />
-      <div className="absolute top-[30%] -left-44 h-[440px] w-[440px] rounded-full bg-[#E8E4D9] opacity-70 blur-2xl" />
-      <div className="absolute bottom-[-190px] right-[-190px] h-[560px] w-[560px] rounded-full bg-[#4AA171]/10 blur-3xl" />
+      {/* Traits très subtils */}
+      <div className="absolute inset-0 opacity-[0.10] [background-image:linear-gradient(to_right,#4AA171_1px,transparent_1px),linear-gradient(to_bottom,#4AA171_1px,transparent_1px)] [background-size:72px_72px]" />
 
-      {/* Petites formes (accent) */}
-      <div className="absolute top-24 right-10 h-20 w-20 rotate-12 rounded-3xl bg-white/35 border border-white/30 shadow-sm shadow-black/10 backdrop-blur-md" />
-      <div className="absolute bottom-28 left-10 h-16 w-16 -rotate-6 rounded-full bg-white/30 border border-white/25 shadow-sm shadow-black/10 backdrop-blur-md" />
+      {/* Vagues (style “flow”) en bas */}
+      <svg
+        className="absolute -bottom-16 left-1/2 w-[1300px] -translate-x-1/2 opacity-40"
+        viewBox="0 0 1200 240"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M-50 160 C 150 90, 350 210, 550 140 C 750 70, 950 200, 1250 110"
+          stroke={accent.wave1}
+          strokeWidth="14"
+          strokeLinecap="round"
+          opacity="0.25"
+        />
+        <path
+          d="M-80 200 C 140 120, 360 250, 580 160 C 800 70, 980 230, 1280 140"
+          stroke={accent.wave2}
+          strokeWidth="10"
+          strokeLinecap="round"
+          opacity="0.22"
+        />
+        <path
+          d="M-60 120 C 170 40, 380 190, 610 120 C 840 50, 990 150, 1260 70"
+          stroke={accent.wave2}
+          strokeWidth="6"
+          strokeLinecap="round"
+          opacity="0.14"
+        />
+      </svg>
     </div>
   );
 }

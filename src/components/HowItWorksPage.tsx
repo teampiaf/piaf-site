@@ -10,13 +10,12 @@ import {
 } from "lucide-react";
 import { SecondaryBackground } from "./ui/SecondaryBackground";
 
-export function HowItWorksPage() {
+export function HowItWorks() {
   return (
-    <section className="relative w-full px-4 py-10 md:py-14 overflow-hidden">
-      {/* Fond dynamique UNIQUEMENT ici (page secondaire) */}
+    <div className="min-h-screen relative overflow-hidden font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       <SecondaryBackground variant="howitworks" />
 
-      <div className="max-w-7xl mx-auto">
+      <div className="relative z-10 px-4 md:px-8 py-10 max-w-6xl mx-auto">
         {/* RETOUR */}
         <a
           href="/"
@@ -136,6 +135,6 @@ export function HowItWorksPage() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
