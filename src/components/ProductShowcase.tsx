@@ -15,8 +15,8 @@ export function ProductShowcase() {
         <div className="relative bg-[#4AA171]/70 backdrop-blur-xl rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 overflow-hidden text-white shadow-2xl shadow-[#4AA171]/20">
           
           {/* DÉCORATIONS D'ARRIÈRE-PLAN (Lumières floues) */}
-          <div className="absolute top-0 right-0 w-[35rem] h-[35rem] bg-yellow-100 opacity-20 mix-blend-overlay rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3" />
-          <div className="absolute bottom-0 left-0 w-[35rem] h-[35rem] bg-emerald-900 opacity-20 mix-blend-multiply rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3" />
+          <div className="absolute top-0 right-0 w-[35rem] h-[35rem] bg-yellow-100 opacity-30 mix-blend-overlay rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3" />
+          <div className="absolute bottom-0 left-0 w-[35rem] h-[35rem] bg-emerald-900 opacity-30 mix-blend-multiply rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3" />
 
           {/* GRILLE DU CONTENU (2 colonnes sur ordi, 1 sur mobile) 
               z-10 : Pour passer au-dessus des lumières floues
@@ -63,10 +63,8 @@ export function ProductShowcase() {
                 COLONNE DROITE : IMAGE APPLICATION
             -------------------------------------- */}
             <div className="relative flex justify-center lg:justify-end">
-              {/* Animation globale (marche sur mobile aussi) */}
               <div className="relative w-full max-w-md animate-float">
-                {/* Rotation au hover (desktop) */}
-                <div className="transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
+                <div className="transform rotate-3 hover:rotate-0 transition-transform duration-300 ease-out">
                   <img
                     src="/images/mockup_3D_navigation.png"
                     alt="Interface Application PIAF"
