@@ -1,8 +1,8 @@
 import React from "react";
 import { Blob } from "./components/ui/Blob";
 
-import { ProjectPage } from "./components/ProjectPage";
-import { HowItWorksPage } from "./components/HowItWorksPage";
+import { ProjectPage } from "./components/Project";
+import { HowItWorksPage } from "./components/HowItWorks";
 
 
 
