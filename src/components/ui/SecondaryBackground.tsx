@@ -3,10 +3,22 @@ import React from "react";
 export function SecondaryBackground({
   variant = "project",
 }: {
-  variant?: "project" | "howitworks";
+  variant?: "project" | "howitworks" | "download";
 }) {
-  const green = variant === "howitworks" ? "rgba(74,161,113,0.16)" : "rgba(74,161,113,0.13)";
-  const beige = variant === "howitworks" ? "rgba(245,242,234,0.80)" : "rgba(249,247,242,0.85)";
+  const isHow = variant === "howitworks";
+  const isDownload = variant === "download";
+
+  const green = isHow
+    ? "rgba(74,161,113,0.16)"
+    : isDownload
+    ? "rgba(74,161,113,0.18)"
+    : "rgba(74,161,113,0.13)";
+
+  const beige = isHow
+    ? "rgba(245,242,234,0.80)"
+    : isDownload
+    ? "rgba(249,247,242,0.92)"
+    : "rgba(249,247,242,0.85)";
 
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -20,7 +32,12 @@ export function SecondaryBackground({
         }}
       />
 
-      {/* Grid très subtil */}
+      {/* Formes arrondies (blobs) */}
+      <div className="absolute -top-24 -left-24 w-[28rem] h-[28rem] rounded-full bg-[#4AA171]/15 blur-[70px]" />
+      <div className="absolute top-24 -right-28 w-[32rem] h-[32rem] rounded-full bg-emerald-300/20 blur-[90px]" />
+      <div className="absolute -bottom-40 left-1/3 w-[34rem] h-[34rem] rounded-full bg-yellow-100/30 blur-[110px]" />
+
+      {/* Grid subtil */}
       <div
         className="absolute inset-0 opacity-[0.10]"
         style={{
@@ -30,7 +47,7 @@ export function SecondaryBackground({
         }}
       />
 
-      {/* “Flow lines” style screenshot */}
+      {/* Flow lines */}
       <svg
         className="absolute -bottom-20 left-1/2 w-[1300px] -translate-x-1/2 opacity-40"
         viewBox="0 0 1200 240"

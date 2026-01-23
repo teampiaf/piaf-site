@@ -1,19 +1,23 @@
-import React from "react";
-import { ArrowLeft, Instagram, Linkedin } from "lucide-react";
+import React from 'react';
+import { ArrowLeft, Instagram, Linkedin } from 'lucide-react';
 import { LINKS } from "../config/links";
+import { SecondaryBackground } from "./ui/SecondaryBackground";
 
 export function Download() {
   return (
-    <div className="min-h-screen relative flex flex-col items-center justify-center p-4 text-center selection:bg-[#4AA171] selection:text-white">
+    <div className="min-h-screen relative overflow-hidden flex flex-col items-center justify-center p-4 text-center selection:bg-[#4AA171] selection:text-white">
+      {/* Fond secondaire + formes arrondies */}
+      <SecondaryBackground variant="download" />
+
       <a
         href="/"
-        className="absolute top-6 left-4 md:top-8 md:left-8 p-3 rounded-full bg-white/35 backdrop-blur-xl border border-white/30 shadow-md shadow-black/10 hover:bg-white/45 transition-colors group"
+        className="absolute top-6 left-4 md:top-8 md:left-8 p-3 rounded-full bg-white/35 backdrop-blur-xl border border-white/30 shadow-md shadow-black/10 hover:bg-white/45 transition-colors group z-10"
         aria-label="Retour"
       >
         <ArrowLeft className="text-gray-700 group-hover:text-[#4AA171]" />
       </a>
 
-      <div className="max-w-2xl w-full bg-white/16 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-10 md:p-12 shadow-2xl shadow-black/10 border border-white/25">
+      <div className="relative z-10 max-w-2xl w-full bg-white/16 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-10 md:p-12 shadow-2xl shadow-black/10 border border-white/25">
         <div className="w-24 h-24 bg-white/18 backdrop-blur-xl rounded-full flex items-center justify-center mx-auto mb-8">
           <span className="text-5xl">🚀</span>
         </div>
@@ -43,20 +47,14 @@ export function Download() {
         </div>
       </div>
 
-      <p className="mt-10 md:mt-12 text-gray-600/70 text-sm">© 2026 PIAF App - Cui Cui</p>
+      <p className="relative z-10 mt-10 md:mt-12 text-gray-600/70 text-sm">
+        © 2026 PIAF App - Cui Cui
+      </p>
     </div>
   );
 }
 
-const SocialBtn = ({
-  icon: Icon,
-  link,
-  label,
-}: {
-  icon: any;
-  link: string;
-  label: string;
-}) => {
+const SocialBtn = ({ icon: Icon, link, label }: any) => {
   return (
     <a
       href={link}
