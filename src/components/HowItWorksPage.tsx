@@ -10,7 +10,7 @@ import {
 } from "lucide-react";
 import { SecondaryBackground } from "./ui/SecondaryBackground";
 
-export function HowItWorks() {
+export function HowItWorksPage() {
   return (
     <div className="min-h-screen relative overflow-hidden font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       <SecondaryBackground variant="howitworks" />
