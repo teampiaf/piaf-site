@@ -41,26 +41,28 @@ export function App() {
           />
         </div>
 
-        {/* ✅ responsive : évite que contact disparaisse + empêche de chevaucher le logo */}
-        <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
+
+        {/* ✅ Boutons header : jamais coupés + stack sur mobile */}
+        <div className="absolute top-0 left-0 right-0 px-4 md:px-8 pt-4 sm:pt-5 md:pt-8">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
-            <div className="flex gap-3 sm:gap-4 md:gap-12 items-center mt-4 sm:mt-5 md:mt-20 md:-mr-24">
+            <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 md:gap-6">
               <a
                 href="mailto:piaf.contact@gmail.com"
-                className="inline-block bg-white/70 backdrop-blur-md border border-white/60 text-[#4AA171] font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
+                className="inline-flex justify-center sm:justify-start bg-white/70 backdrop-blur-md border border-white/60 text-[#4AA171] font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 w-full sm:w-auto"
               >
                 Contact
               </a>
 
               <a
                 href="/download"
-                className="bg-[#4AA171] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center"
+                className="inline-flex justify-center sm:justify-start bg-[#4AA171] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-4 ring-white/40 hover:-translate-y-0.5 w-full sm:w-auto text-center"
               >
                 Télécharger
               </a>
             </div>
           </div>
         </div>
+
       </header>
 
       {/* CONTENU PRINCIPAL */}
