@@ -10,8 +10,8 @@ import { ProjectPage } from "./components/ProjectPage";
 import { HowItWorksPage } from "./components/HowItWorksPage";
 
 export function App() {
-  // 1. ROUTAGE SIMPLE
-  const path = window.location.pathname;
+  // 1. ROUTAGE SIMPLE (VITE SPA)
+  const path = window.location.pathname.replace(/\/$/, ""); // enlève le "/" final si besoin
 
   if (path === "/download") return <Download />;
   if (path === "/project") return <ProjectPage />;
@@ -22,7 +22,7 @@ export function App() {
     <div className="min-h-screen bg-gradient-to-b from-[#effcf6] to-white font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       {/* HEADER */}
       <header className="relative w-full">
-        <div className="w-full h-[140px] md:h-[225px]">
+        <div className="w-full h-[225px]">
           <img
             src="/images/banderole2.png"
             alt="Banderole PIAF"
@@ -30,20 +30,19 @@ export function App() {
           />
         </div>
 
-        {/* ✅ responsive : évite que contact disparaisse + empêche de chevaucher le logo */}
         <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
-            <div className="flex gap-3 sm:gap-4 md:gap-12 items-center mt-4 sm:mt-5 md:mt-20 md:-mr-24">
+            <div className="flex gap-4 md:gap-12 items-center mt-6 md:mt-20 md:-mr-24">
               <a
                 href="mailto:piaf.contact@gmail.com"
-                className="inline-block bg-white/70 backdrop-blur-md border border-white/60 text-[#4AA171] font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
+                className="hidden md:block bg-white text-[#4AA171] font-bold px-6 py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5"
               >
                 Contact
               </a>
 
               <a
                 href="/download"
-                className="bg-[#4AA171] text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center"
+                className="bg-[#4AA171] text-white px-5 md:px-6 py-2.5 md:py-3 rounded-full font-bold hover:bg-[#3d8c60] transition-all shadow-xl ring-4 ring-white/40 hover:-translate-y-0.5 inline-block text-center"
               >
                 Télécharger
               </a>
@@ -60,7 +59,7 @@ export function App() {
         <Team />
       </main>
 
-      {/* FOOTER */}
+      {/* PIED DE PAGE (FOOTER) */}
       <footer className="bg-white py-12 px-4 text-center text-gray-400 text-sm">
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn
