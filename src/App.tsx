@@ -11,7 +11,7 @@ import { HowItWorksPage } from "./components/HowItWorksPage";
 
 export function App() {
   // 1. ROUTAGE SIMPLE
-  const path = window.location.pathname;
+  const path = window.location.pathname.replace(/\/$/, "");
 
   if (path === "/download") return <Download />;
   if (path === "/project") return <ProjectPage />;
@@ -30,7 +30,7 @@ export function App() {
           />
         </div>
 
-        {/* ✅ responsive : évite que contact disparaisse + empêche de chevaucher le logo */}
+        {/* Zone boutons (responsive + évite overlap sur mobile) */}
         <div className="absolute inset-0 px-4 md:px-8 flex justify-end items-start">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
             <div className="flex gap-3 sm:gap-4 md:gap-12 items-center mt-4 sm:mt-5 md:mt-20 md:-mr-24">
@@ -60,8 +60,9 @@ export function App() {
         <Team />
       </main>
 
-      {/* FOOTER */}
+      {/* PIED DE PAGE (FOOTER) */}
       <footer className="bg-white py-12 px-4 text-center text-gray-400 text-sm">
+        {/* === AJOUT : LES RÉSEAUX SOCIAUX === */}
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn
             icon={Instagram}
@@ -80,10 +81,14 @@ export function App() {
           />
         </div>
 
+        {/* LIGNE DE SÉPARATION & COPYRIGHT */}
         <div className="max-w-7xl mx-auto border-t border-gray-100 pt-12 flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© 2026 PIAF - Parcours Interactifs Accessibles Facilement.</p>
           <div className="flex gap-4">
-            <a href="mailto:support@piaf-app.fr" className="hover:text-[#4AA171]">
+            <a
+              href="mailto:support@piaf-app.fr"
+              className="hover:text-[#4AA171]"
+            >
               Support
             </a>
             <span className="text-gray-300">|</span>
