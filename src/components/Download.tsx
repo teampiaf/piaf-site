@@ -11,10 +11,10 @@ export function Download() {
 
       <a
         href="/"
-        className="absolute top-6 left-4 md:top-8 md:left-8 p-3 rounded-full bg-white/35 backdrop-blur-xl border border-white/30 shadow-md shadow-black/10 hover:bg-white/45 transition-colors group z-10"
-        aria-label="Retour"
+        className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white/45 backdrop-blur-xl border border-white/35 text-gray-700 hover:text-[#4AA171] transition shadow-md shadow-black/10"
       >
-        <ArrowLeft className="text-gray-700 group-hover:text-[#4AA171]" />
+        <ArrowLeft className="w-4 h-4" />
+        Retour
       </a>
 
       <div className="relative z-10 max-w-2xl w-full bg-white/16 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-10 md:p-12 shadow-2xl shadow-black/10 border border-white/25">

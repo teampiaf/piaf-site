@@ -45,7 +45,7 @@ export function App() {
         <div className="absolute top-0 left-0 right-0 px-4 md:px-8 pt-4 sm:pt-5 md:pt-8">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
             {/* ✅ mobile = colonne, ≥sm = ligne */}
-            <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-3 md:gap-4">
+            <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-3 md:gap-6">
               <a
                 href="mailto:piaf.contact@gmail.com"
                 className="inline-flex justify-center sm:justify-start bg-white/70 backdrop-blur-md border border-white/60 text-[#4AA171] font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 w-full sm:w-auto"
