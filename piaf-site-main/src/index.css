@@ -1,0 +1,26 @@
+/* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Fix mobile : empêche le slide horizontal chelou */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+/* ===== Mockup float animation (ajout) ===== */
+@keyframes piaf-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+
+.piaf-float {
+  animation: piaf-float 2.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .piaf-float { animation: none; }
+}
