@@ -1,102 +1,71 @@
 import React from "react";
-import { ArrowLeft } from "lucide-react";
-import { Button } from "./ui/Button";
 import { SecondaryBackground } from "./ui/SecondaryBackground";
 
 export function HowItWorksPage() {
   return (
-    <div className="min-h-screen relative overflow-hidden font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+    <div className="min-h-screen relative overflow-hidden bg-white px-4 py-10">
       <SecondaryBackground variant="howitworks" />
 
-      {/* Bouton retour */}
-      <a
-        href="/"
-        className="absolute top-6 left-6 z-20 inline-flex items-center justify-center rounded-full bg-white/60 backdrop-blur-md border border-white/60 shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 w-11 h-11"
-        aria-label="Retour"
-      >
-        <ArrowLeft className="w-5 h-5 text-gray-700" />
-      </a>
+      <div className="relative z-10 max-w-5xl mx-auto">
+        <div className="bg-white/65 backdrop-blur-md border border-white/60 rounded-[2.5rem] p-8 md:p-12 shadow-xl">
+          <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-10">
+            <a
+              href="/"
+              className="px-6 py-3 rounded-full bg-white/70 backdrop-blur-md border border-white/60 text-[#4AA171] font-bold hover:bg-white transition-all"
+            >
+              ← Retour
+            </a>
 
-      <div className="relative z-10 px-4 md:px-8 py-12 max-w-5xl mx-auto">
-        {/* HERO / Intro */}
-        <div className="bg-white/50 backdrop-blur-md border border-white/60 shadow-xl rounded-[2.5rem] p-6 md:p-10">
-          <h1 className="text-3xl md:text-5xl font-bold text-gray-800 mb-4">
+            <a
+              href="/download"
+              className="px-6 py-3 rounded-full bg-[#4AA171] text-white font-bold hover:bg-[#3d8c60] transition-all shadow-lg shadow-[#4AA171]/20"
+            >
+              Télécharger l’app
+            </a>
+          </div>
+
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
             Comment ça marche ?
           </h1>
-          <p className="text-lg md:text-xl text-gray-600 leading-relaxed">
-            PIAF t’aide à choisir des itinéraires plus accessibles, grâce aux
-            signalements et aux retours de la communauté.
+
+          <p className="text-lg md:text-xl text-gray-600 leading-relaxed mb-8">
+            PIAF fonctionne comme un copilote urbain : il te guide sur des itinéraires plus fluides et
+            t’informe des obstacles signalés ou confirmés par la communauté.
           </p>
 
-          {/* CTAs (même style que ton cadre vert via Button.tsx) */}
-          <div className="flex flex-col sm:flex-row gap-4 mt-8">
-            <a href="/download" className="no-underline">
-              <Button icon>Télécharger l'app</Button>
-            </a>
-            <a href="/project" className="no-underline">
-              <Button variant="secondary">Découvrir le projet</Button>
-            </a>
-          </div>
-        </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="bg-white/55 backdrop-blur-md border border-white/60 rounded-[2rem] p-6 shadow-lg">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">1) Itinéraires</h2>
+              <p className="text-gray-600 leading-relaxed">
+                L’application privilégie les chemins les plus praticables et évite les zones souvent problématiques.
+              </p>
 
-        {/* Sections */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-          <div className="bg-white/45 backdrop-blur-md border border-white/60 shadow-lg rounded-[2.5rem] p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
-              1) Tu choisis ton trajet
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              L’app privilégie les chemins plus fluides et évite les zones
-              souvent problématiques selon les retours terrain.
-            </p>
+              {/* TEMPLATE IMAGE */}
+              {/*
+              <img src="/images/placeholder_itineraire.jpg" alt="" className="mt-5 rounded-2xl w-full" />
+              */}
+            </div>
 
-            {/* TEMPLATE IMAGE (à activer plus tard) */}
-            {/*
-              <img
-                src="/images/placeholder_trajet.png"
-                alt="Exemple de trajet"
-                className="mt-5 rounded-2xl w-full"
-              />
-            */}
-          </div>
+            <div className="bg-white/55 backdrop-blur-md border border-white/60 rounded-[2rem] p-6 shadow-lg">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">2) Signalements</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Un clic pour signaler un obstacle (travaux, trottoir impraticable, passage fermé…) ou un point facilitateur.
+              </p>
+            </div>
 
-          <div className="bg-white/45 backdrop-blur-md border border-white/60 shadow-lg rounded-[2.5rem] p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
-              2) Tu vois les infos utiles
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Obstacles, passages étroits, pentes… l’objectif c’est “zéro
-              mauvaise surprise” avant de t’engager.
-            </p>
+            <div className="bg-white/55 backdrop-blur-md border border-white/60 rounded-[2rem] p-6 shadow-lg">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">3) Validation</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Les infos deviennent fiables quand elles sont confirmées : moins de surprises, plus de confiance.
+              </p>
+            </div>
 
-            {/* TEMPLATE IMAGE */}
-            {/*
-              <img
-                src="/images/placeholder_infos.png"
-                alt="Infos d'accessibilité"
-                className="mt-5 rounded-2xl w-full"
-              />
-            */}
-          </div>
-
-          <div className="bg-white/45 backdrop-blur-md border border-white/60 shadow-lg rounded-[2.5rem] p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
-              3) Tu signales en 1 clic
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Tu peux remonter un souci (travaux, trottoir impraticable…) ou au
-              contraire valider qu’un passage est OK.
-            </p>
-          </div>
-
-          <div className="bg-white/45 backdrop-blur-md border border-white/60 shadow-lg rounded-[2.5rem] p-6 md:p-8">
-            <h2 className="text-xl md:text-2xl font-bold text-gray-800 mb-3">
-              4) La communauté fiabilise
-            </h2>
-            <p className="text-gray-600 leading-relaxed">
-              Les infos sont confirmées au fil des usages : plus il y a
-              d’activité, plus les trajets deviennent fiables.
-            </p>
+            <div className="bg-white/55 backdrop-blur-md border border-white/60 rounded-[2rem] p-6 shadow-lg">
+              <h2 className="text-xl font-bold text-gray-800 mb-2">4) Amélioration continue</h2>
+              <p className="text-gray-600 leading-relaxed">
+                Plus l’app est utilisée, plus la carte devient pertinente. L’objectif : une ville plus lisible pour tous.
+              </p>
+            </div>
           </div>
         </div>
       </div>

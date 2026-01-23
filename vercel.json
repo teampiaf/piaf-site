@@ -1,7 +1,3 @@
 {
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }],
-  "redirects": [
-    { "source": "/instagram", "destination": "https://www.instagram.com/team_piaf/", "permanent": false },
-    { "source": "/linkedin", "destination": "https://www.linkedin.com/company/teampiaf", "permanent": false }
-  ]
+  "rewrites": [{ "source": "/(.*)", "destination": "/" }]
 }

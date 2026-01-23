@@ -1,90 +1,12 @@
 /* URL IMPORTS (SUCH AS FONT IMPORTS) SHOULD BE KEPT ABOVE TAILWIND IMPORTS - DO NOT DELETE THIS COMMENT */
 
-/* PLEASE NOTE: THESE TAILWIND IMPORTS SHOULD NEVER BE DELETED - DO NOT DELETE THIS COMMENT */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL - DO NOT DELETE THIS COMMENT */
 
-/* Empêche le scroll horizontal “bande blanche” sur mobile */
-html, body {
+/* Fix mobile : empêche le slide horizontal chelou */
+html,
+body {
   width: 100%;
   overflow-x: hidden;
-}
-#root {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-/* Fond PIAF : beige/vert + relief (multi-couches) */
-.site-bg {
-  position: relative;
-  background:
-    radial-gradient(1100px circle at 18% 0%, rgba(74,161,113,0.24) 0%, rgba(74,161,113,0) 58%),
-    radial-gradient(900px circle at 85% 18%, rgba(249,247,242,0.95) 0%, rgba(249,247,242,0) 62%),
-    radial-gradient(800px circle at 35% 88%, rgba(74,161,113,0.16) 0%, rgba(74,161,113,0) 60%),
-    linear-gradient(180deg, #F7F3E8 0%, #ECF8F1 55%, #F9FBF8 100%);
-}
-
-/* Blobs “relief” animés (très doux) */
-.site-bg::before,
-.site-bg::after {
-  content: "";
-  position: fixed;
-  inset: -20%;
-  pointer-events: none;
-  filter: blur(80px);
-  transform: translate3d(0,0,0);
-}
-
-.site-bg::before {
-  background: radial-gradient(circle at 30% 30%, rgba(74,161,113,0.30), transparent 55%);
-  animation: driftA 14s ease-in-out infinite;
-}
-
-.site-bg::after {
-  background: radial-gradient(circle at 70% 65%, rgba(249,247,242,0.90), transparent 60%);
-  animation: driftB 18s ease-in-out infinite;
-}
-
-/* Micro grain premium (très léger) */
-.site-bg {
-  position: relative;
-  isolation: isolate; /* important : crée un contexte pour z-index négatif */
-}
-
-/* Tout ce qui est “relief” -> derrière */
-.site-bg::before,
-.site-bg::after {
-  z-index: -2;
-}
-
-/* Noise -> derrière (et plus léger) */
-.site-noise::before {
-  z-index: -1;
-  mix-blend-mode: normal;  /* soft-light peut “salir” le rendu */
-}
-
-@keyframes driftA {
-  0%, 100% { transform: translate(-2%, -1%) scale(1); }
-  50%      { transform: translate(3%, 2%) scale(1.05); }
-}
-@keyframes driftB {
-  0%, 100% { transform: translate(2%, 1%) scale(1); }
-  50%      { transform: translate(-3%, -2%) scale(1.06); }
-}
-
-
-#root {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-28px); } /* plus haut */
-}
-
-.animate-float {
-  animation: float 3.2s ease-in-out infinite; /* plus rapide */
 }

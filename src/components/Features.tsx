@@ -1,82 +1,61 @@
-import React from 'react';
-// J'importe les icônes de la librairie Lucide pour illustrer les 4 piliers
-import { Map, Zap, Users, Shield } from 'lucide-react';
+import React from "react";
+import { Button } from "./ui/Button";
+import { Blob } from "./ui/Blob";
 
-// Configuration des données : Je modifie les textes ici pour ne pas toucher au HTML en bas
-const features = [
-  {
-    title: 'Navigation Adaptée',
-    description: "Un GPS qui connaît vos limites. Il calcule le trajet le plus fluide et contourne les obstacles en temps réel pour ne plus jamais être stoppé.",
-    icon: Map, // Icone Carte pour le GPS
-    delay: '0ms' // Pas de délai, s'affiche tout de suite
-  },
-  {
-    title: 'Détection Obstacles',
-    description: "Anticipez au lieu de subir. PIAF vous alerte grâce aux signalements et à l’historique des zones à risque, pour éviter les mauvaises surprises.",
-    icon: Zap, // Icone Éclair pour la rapidité/technologie
-    delay: '100ms' // Petit délai pour l'effet "cascade"
-  },
-  {
-    title: 'Communauté Solidaire',
-    description: 'Veillez les uns sur les autres. Un clic pour signaler ou valider un danger, c\'est un trajet sécurisé pour tous.',
-    icon: Users, // Icone Groupe pour l'aspect social
-    delay: '200ms'
-  },
-  {
-    title: 'Données Fiables',
-    description: 'Partez l\'esprit tranquille. Nos données sont vérifiées par la communauté pour zéro mauvaise surprise.',
-    icon: Shield, // Icone Bouclier pour la sécurité/confiance
-    delay: '300ms'
-  }
-];
-
-export function Features() {
+export function Hero() {
   return (
-    // Section principale avec marge verticale (py-20) et centrée
-    <section className="py-12 px-4 md:px-8 max-w-7xl mx-auto overflow-hidden">
-      
-      {/* En-tête de la section : Titre + Sous-titre */}
-      <div className="text-center mb-16">
-        <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
-          Parcours Interactifs et Accessibles Facilement
-        </h2>
-        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          Plus qu'une application, PIAF est votre copilote urbain pour une autonomie retrouvée.
-        </p>
-      </div>
+    <section className="relative w-full px-4 pb-8 pt-0 overflow-hidden">
+      <Blob className="top-0 left-0 w-72 h-72 bg-[#4AA171]/10 -translate-x-1/2 -translate-y-1/2" />
+      <Blob className="bottom-0 right-0 w-96 h-96 bg-[#E8E4D9] translate-x-1/3 translate-y-1/3" />
 
-      {/* Grille responsive : 1 colonne sur mobile, 2 sur tablette, 4 sur ordi */}
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-        
-        {/* Je boucle sur ma liste 'features' pour créer les 4 cartes automatiquement */}
-        {features.map((feature, index) => (
-          <div 
-            key={index} 
-            // Design de la carte : Dégradé subtil, bords arrondis, et ombre verte au survol
-            className="group relative bg-white/14 backdrop-blur-2xl backdrop-saturate-150 p-8 rounded-[3rem] md:rounded-[4rem] shadow-xl shadow-black/10 hover:shadow-2xl hover:shadow-black/12 transition-all duration-500 hover:-translate-y-1 border border-white/25"
-            style={{ animationDelay: feature.delay }}
-          >
-            {/* Le conteneur de l'icône (CARRÉ BLANC)
-               Note : J'ai passé la taille à w-20 h-20 (80px) pour que ce soit plus imposant 
-            */}
-            <div className="w-20 h-20 bg-white/18 backdrop-blur-xl border border-white/25 rounded-2xl flex items-center justify-center mb-6 shadow-sm shadow-black/10 group-hover:scale-110 transition-transform duration-300 text-[#4AA171]">
-              
-              {/* L'icône elle-même : taille fixée à 40px */}
-              <feature.icon size={40} />
-            
-            </div>
+      <div className="max-w-7xl mx-auto">
+        <div className="relative bg-white/80 backdrop-blur-sm rounded-[3rem] p-8 md:p-16 lg:p-24 shadow-xl shadow-[#4AA171]/5 border border-white/50 overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-[#F9F7F2] to-white rounded-bl-[10rem] -mr-10 -mt-10 z-0" />
 
-            {/* Titre de la fonctionnalité */}
-            <h3 className="text-xl font-bold text-gray-800 mb-3 group-hover:text-[#4AA171] transition-colors">
-              {feature.title}
-            </h3>
+          <div className="relative z-10 max-w-3xl">
+            <span className="inline-block px-4 py-2 rounded-full bg-[#F9F7F2] text-[#4AA171] font-bold text-sm mb-6 tracking-wide border border-[#4AA171]/10 shadow-sm">
+              🏆 Vainqueur Challenge Innovation Sécurité Routière 2025
+            </span>
 
-            {/* Description courte */}
-            <p className="text-gray-600 leading-relaxed">
-              {feature.description}
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-800 mb-8 leading-tight tracking-tight">
+              Ne marchez plus,{" "}
+              <span className="text-[#4AA171] relative inline-block">
+                volez
+                <svg
+                  className="absolute w-full h-3 -bottom-1 left-0 text-[#4AA171]/20"
+                  viewBox="0 0 100 10"
+                  preserveAspectRatio="none"
+                >
+                  <path
+                    d="M0 5 Q 50 10 100 5"
+                    stroke="currentColor"
+                    strokeWidth="8"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+              !
+            </h1>
+
+            {/* ✅ KIT supprimé des textes */}
+            <p className="text-xl md:text-2xl text-gray-600 mb-10 leading-relaxed max-w-2xl">
+              PIAF rend la ville accessible à tous. Une application GPS communautaire pour signaler,
+              anticiper et éviter les obstacles.
             </p>
+
+            <div className="flex flex-col sm:flex-row gap-4">
+              {/* ✅ Bouton 1 : Page Projet */}
+              <a href="/project" className="no-underline">
+                <Button icon>Découvrir le projet</Button>
+              </a>
+
+              {/* ✅ Bouton 2 : Page How it works */}
+              <a href="/how-it-works" className="no-underline">
+                <Button variant="secondary">Comment ça marche ?</Button>
+              </a>
+            </div>
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

@@ -5,70 +5,58 @@ export function SecondaryBackground({
 }: {
   variant?: "project" | "howitworks";
 }) {
-  const accent =
-    variant === "howitworks"
-      ? {
-          a: "from-[#4AA171]/20",
-          b: "via-[#D9F3E7]/30",
-          c: "to-[#F5F2EA]/70",
-          wave1: "#4AA171",
-          wave2: "#7FD6AE",
-        }
-      : {
-          a: "from-[#4AA171]/15",
-          b: "via-[#E8E4D9]/50",
-          c: "to-[#F5F2EA]/75",
-          wave1: "#4AA171",
-          wave2: "#9BE3C1",
-        };
+  const green = variant === "howitworks" ? "rgba(74,161,113,0.16)" : "rgba(74,161,113,0.13)";
+  const beige = variant === "howitworks" ? "rgba(245,242,234,0.80)" : "rgba(249,247,242,0.85)";
 
   return (
     <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-      {/* Base soft gradient */}
+      {/* Base */}
       <div
-        className={[
-          "absolute inset-0",
-          "bg-gradient-to-b",
-          accent.a,
-          accent.b,
-          accent.c,
-        ].join(" ")}
+        className="absolute inset-0"
+        style={{
+          background: `radial-gradient(1200px 600px at 20% 10%, ${green}, transparent 55%),
+                       radial-gradient(1000px 500px at 85% 30%, rgba(217,243,231,0.35), transparent 60%),
+                       linear-gradient(to bottom, ${beige}, white)`,
+        }}
       />
 
-      {/* Relief : 2 “blobs” flous */}
-      <div className="absolute -top-40 -left-40 h-[520px] w-[520px] rounded-full bg-[#4AA171]/20 blur-[90px]" />
-      <div className="absolute -bottom-56 -right-56 h-[620px] w-[620px] rounded-full bg-[#D9F3E7]/40 blur-[110px]" />
+      {/* Grid très subtil */}
+      <div
+        className="absolute inset-0 opacity-[0.10]"
+        style={{
+          backgroundImage:
+            "linear-gradient(to right, rgba(74,161,113,0.18) 1px, transparent 1px), linear-gradient(to bottom, rgba(74,161,113,0.18) 1px, transparent 1px)",
+          backgroundSize: "84px 84px",
+        }}
+      />
 
-      {/* Traits très subtils */}
-      <div className="absolute inset-0 opacity-[0.10] [background-image:linear-gradient(to_right,#4AA171_1px,transparent_1px),linear-gradient(to_bottom,#4AA171_1px,transparent_1px)] [background-size:72px_72px]" />
-
-      {/* Vagues en bas */}
+      {/* “Flow lines” style screenshot */}
       <svg
-        className="absolute -bottom-16 left-1/2 w-[1300px] -translate-x-1/2 opacity-40"
+        className="absolute -bottom-20 left-1/2 w-[1300px] -translate-x-1/2 opacity-40"
         viewBox="0 0 1200 240"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M-50 160 C 150 90, 350 210, 550 140 C 750 70, 950 200, 1250 110"
-          stroke={accent.wave1}
+          stroke="#4AA171"
           strokeWidth="14"
-          strokeLinecap="round"
-          opacity="0.25"
-        />
-        <path
-          d="M-80 200 C 140 120, 360 250, 580 160 C 800 70, 980 230, 1280 140"
-          stroke={accent.wave2}
-          strokeWidth="10"
           strokeLinecap="round"
           opacity="0.22"
         />
         <path
+          d="M-80 200 C 140 120, 360 250, 580 160 C 800 70, 980 230, 1280 140"
+          stroke="#9BE3C1"
+          strokeWidth="10"
+          strokeLinecap="round"
+          opacity="0.20"
+        />
+        <path
           d="M-60 120 C 170 40, 380 190, 610 120 C 840 50, 990 150, 1260 70"
-          stroke={accent.wave2}
+          stroke="#9BE3C1"
           strokeWidth="6"
           strokeLinecap="round"
-          opacity="0.14"
+          opacity="0.12"
         />
       </svg>
     </div>
