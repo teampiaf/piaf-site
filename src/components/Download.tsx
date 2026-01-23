@@ -9,18 +9,18 @@ export function Download() {
       {/* Fond secondaire */}
       <SecondaryBackground variant="download" />
 
+      {/* ✅ Bouton retour : top-left de la page (hors bulle) */}
+      <a
+        href="/"
+        className="absolute top-6 left-4 md:top-8 md:left-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/45 backdrop-blur-xl border border-white/35 text-gray-700 hover:text-[#4AA171] transition shadow-md shadow-black/10 z-20"
+      >
+        <ArrowLeft className="w-4 h-4" />
+        Retour
+      </a>
+
       <div className="relative z-10 w-full max-w-2xl">
         {/* Carte */}
         <div className="relative w-full bg-white/16 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-10 md:p-12 shadow-2xl shadow-black/10 border border-white/25">
-          {/* ✅ Bouton retour : top-left de la carte */}
-          <a
-            href="/"
-            className="absolute top-6 left-6 md:top-8 md:left-8 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/45 backdrop-blur-xl border border-white/35 text-gray-700 hover:text-[#4AA171] transition shadow-md shadow-black/10"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Retour
-          </a>
-
           <div className="w-24 h-24 bg-white/18 backdrop-blur-xl rounded-full flex items-center justify-center mx-auto mb-8">
             <span className="text-5xl">🚀</span>
           </div>

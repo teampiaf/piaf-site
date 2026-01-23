@@ -71,7 +71,7 @@ export function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="relative z-10 bg-white/60 backdrop-blur-md py-12 px-4 text-center text-gray-400 text-sm border-t border-white/40">
+      <footer className="relative z-10 bg-white py-12 px-4 text-center text-gray-500 text-sm border-t border-gray-100">
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn
             icon={Instagram}
