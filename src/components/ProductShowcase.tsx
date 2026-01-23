@@ -63,14 +63,14 @@ export function ProductShowcase() {
                 COLONNE DROITE : IMAGE APPLICATION
             -------------------------------------- */}
             <div className="relative flex justify-center lg:justify-end">
-              <div className="relative w-full max-w-md animate-float">
-                <div className="transform rotate-3 hover:rotate-0 transition-transform duration-300 ease-out">
-                  <img
-                    src="/images/mockup_3D_navigation.png"
-                    alt="Interface Application PIAF"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
+
+              {/* APRÈS: on garde ton effet, et on ajoute la flotte */}
+              <div className="relative w-full max-w-md piaf-float transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
+                <img
+                  src="/images/mockup_3D_navigation.png"
+                  alt="Interface Application PIAF"
+                  className="w-full h-auto object-contain"
+                />
               </div>
             </div>
 
