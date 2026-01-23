@@ -10,14 +10,25 @@ import { ProjectPage } from "./components/ProjectPage";
 import { HowItWorksPage } from "./components/HowItWorksPage";
 
 export function App() {
-  // 1. ROUTAGE SIMPLE
-  const path = window.location.pathname;
+  // ----------------------------------------------------------------
+  // ROUTAGE SIMPLE (Vite / SPA) — on mappe les URLs vers les "pages"
+  // ----------------------------------------------------------------
+  const rawPath = window.location.pathname;
+  const path = rawPath.replace(/\/+$/, "") || "/"; // enlève les "/" finaux
 
+  // Pages
   if (path === "/download") return <Download />;
-  if (path === "/project") return <ProjectPage />;
-  if (path === "/how-it-works") return <HowItWorksPage />;
 
-  // 2. PAGE D'ACCUEIL
+  // "Découvrir le projet"
+  if (path === "/projet" || path === "/project" || path === "/decouvrir-le-projet")
+    return <ProjectPage />;
+
+  // "Comment ça marche"
+  if (path === "/comment-ca-marche" || path === "/how-it-works") return <HowItWorksPage />;
+
+  // ----------------------------------------------------------------
+  // PAGE D'ACCUEIL
+  // ----------------------------------------------------------------
   return (
     <div className="min-h-screen bg-gradient-to-b from-[#effcf6] to-white font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       {/* HEADER */}
