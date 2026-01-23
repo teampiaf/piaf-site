@@ -1,6 +1,6 @@
 import React from "react";
-// J'importe les icônes nécessaires
 import { Instagram, Linkedin } from "lucide-react";
+
 import { Hero } from "./components/Hero";
 import { Features } from "./components/Features";
 import { ProductShowcase } from "./components/ProductShowcase";
@@ -8,29 +8,28 @@ import { Team } from "./components/Team";
 import { Download } from "./components/Download";
 import { ProjectPage } from "./components/ProjectPage";
 import { HowItWorksPage } from "./components/HowItWorksPage";
+import { SecondaryBackground } from "./components/ui/SecondaryBackground";
 
 export function App() {
-  // ----------------------------------------------------------------
-  // ROUTAGE SIMPLE (Vite / SPA) — mappe les URLs vers les "pages"
-  // ----------------------------------------------------------------
+  // -----------------------------
+  // ROUTAGE SIMPLE (Vite / SPA)
+  // -----------------------------
   const rawPath = window.location.pathname;
-  const path = rawPath.replace(/\/+$/, "") || "/"; // enlève les "/" finaux
+  const path = rawPath.replace(/\/+$/, "") || "/";
 
-  // Page Download
   if (path === "/download") return <Download />;
-
-  // "Découvrir le projet"
   if (path === "/projet" || path === "/project" || path === "/decouvrir-le-projet")
     return <ProjectPage />;
-
-  // "Comment ça marche"
   if (path === "/comment-ca-marche" || path === "/how-it-works") return <HowItWorksPage />;
 
-  // ----------------------------------------------------------------
-  // PAGE D'ACCUEIL
-  // ----------------------------------------------------------------
+  // -----------------------------
+  // HOME
+  // -----------------------------
   return (
-    <div className="min-h-screen bg-gradient-to-b from-[#effcf6] to-white font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+    <div className="min-h-screen relative overflow-hidden font-sans selection:bg-gray-50 selection:text-[#4AA171]">
+      {/* ✅ Fond pro (moins uni) */}
+      <SecondaryBackground variant="home" />
+
       {/* HEADER */}
       <header className="relative w-full">
         <div className="w-full h-[140px] md:h-[225px]">
@@ -44,8 +43,7 @@ export function App() {
         {/* ✅ Boutons header : jamais coupés + empilés sur mobile */}
         <div className="absolute top-0 left-0 right-0 px-4 md:px-8 pt-4 sm:pt-5 md:pt-8">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
-            {/* ✅ mobile = colonne, ≥sm = ligne */}
-            <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-3 md:gap-6">
+            <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-3 md:gap-4">
               <a
                 href="mailto:piaf.contact@gmail.com"
                 className="inline-flex justify-center sm:justify-start bg-white/70 backdrop-blur-md border border-white/60 text-[#4AA171] font-bold px-4 sm:px-6 py-2.5 sm:py-3 rounded-full shadow-md hover:shadow-lg transition-all hover:-translate-y-0.5 w-full sm:w-auto"
@@ -64,8 +62,8 @@ export function App() {
         </div>
       </header>
 
-      {/* CONTENU PRINCIPAL */}
-      <main className="space-y-8 md:space-y-16 pb-16">
+      {/* CONTENU */}
+      <main className="relative z-10 space-y-8 md:space-y-16 pb-16">
         <Hero />
         <Features />
         <ProductShowcase />
@@ -73,7 +71,7 @@ export function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="bg-white py-12 px-4 text-center text-gray-400 text-sm">
+      <footer className="relative z-10 bg-white/60 backdrop-blur-md py-12 px-4 text-center text-gray-400 text-sm border-t border-white/40">
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn
             icon={Instagram}
@@ -92,7 +90,7 @@ export function App() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto border-t border-gray-100 pt-12 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="max-w-7xl mx-auto pt-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p>© 2026 PIAF - Parcours Interactifs Accessibles Facilement.</p>
           <div className="flex gap-4">
             <a href="mailto:support@piaf-app.fr" className="hover:text-[#4AA171]">
