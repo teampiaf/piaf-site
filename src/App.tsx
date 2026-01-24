@@ -9,6 +9,7 @@ import { Download } from "./components/Download";
 import { ProjectPage } from "./components/ProjectPage";
 import { HowItWorksPage } from "./components/HowItWorksPage";
 import { SecondaryBackground } from "./components/ui/SecondaryBackground";
+import { MentionsLegalesPage } from "./components/MentionsLegalesPage";
 
 export function App() {
   // -----------------------------
@@ -21,6 +22,7 @@ export function App() {
   if (path === "/projet" || path === "/project" || path === "/decouvrir-le-projet")
     return <ProjectPage />;
   if (path === "/comment-ca-marche" || path === "/how-it-works") return <HowItWorksPage />;
+  if (path === "/mentions-legales" || path === "/mentions") return <MentionsLegalesPage />;
 
   // -----------------------------
   // HOME
@@ -97,7 +99,7 @@ export function App() {
               Support
             </a>
             <span className="text-gray-300">|</span>
-            <a href="#" className="hover:text-[#4AA171]">
+            <a href="/mentions-legales" className="hover:text-[#4AA171]">
               Mentions Légales
             </a>
           </div>
