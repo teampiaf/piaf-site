@@ -11,7 +11,7 @@ import { HowItWorksPage } from "./components/HowItWorksPage";
 import { MentionsLegalesPage } from "./components/MentionsLegalesPage";
 
 import { SecondaryBackground } from "./components/ui/SecondaryBackground";
-import { CookieBanner } from "./components/CookieBanner";
+import { CookieBanner } from "./components/cookieBanner";
 
 import { getCookieConsent, CookieConsentStatus } from "./lib/cookieConsent";
 import { loadGoogleAnalytics } from "./lib/analytics";
@@ -110,7 +110,7 @@ export function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="relative z-10 bg-transparent py-12 px-4 text-center text-gray-600 text-sm border-t border-white/35">
+      <footer className="relative z-10 bg-white/55 backdrop-blur-xl py-12 px-4 text-center text-gray-600 text-sm border-t border-white/40">
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn
             icon={Instagram}
