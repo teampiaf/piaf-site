@@ -11,7 +11,7 @@ import { HowItWorksPage } from "./components/HowItWorksPage";
 import { MentionsLegalesPage } from "./components/MentionsLegalesPage";
 
 import { SecondaryBackground } from "./components/ui/SecondaryBackground";
-import { CookieBanner } from "./components/cookieBanner";
+import { CookieBanner } from "./components/CookieBanner";
 
 import { getCookieConsent, CookieConsentStatus } from "./lib/cookieConsent";
 import { loadGoogleAnalytics } from "./lib/analytics";
