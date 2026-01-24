@@ -10,17 +10,19 @@ body {
   width: 100%;
   overflow-x: hidden;
 }
-/* ===== Mockup float animation (ajout) ===== */
 @keyframes piaf-float {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-18px); }
+  50% { transform: translateY(-10px); }
 }
 
 .piaf-float {
-  animation: piaf-float 2.8s ease-in-out infinite;
+  animation: piaf-float 3.2s ease-in-out infinite;
   will-change: transform;
 }
 
+/* Respect des préférences d’accessibilité */
 @media (prefers-reduced-motion: reduce) {
-  .piaf-float { animation: none; }
+  .piaf-float {
+    animation: none;
+  }
 }
