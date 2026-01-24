@@ -7,12 +7,10 @@ export function ProductShowcase() {
       <div className="max-w-7xl mx-auto">
         {/* =========================================
             LA CARTE VERTE (Fond principal)
-            rounded-[3rem] : Coins très arrondis
-            overflow-hidden : Coupe tout ce qui dépasse (les cercles flous)
         ========================================= */}
 
         <div className="relative bg-[#4AA171]/70 backdrop-blur-xl rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 overflow-hidden text-white shadow-2xl shadow-[#4AA171]/20">
-          {/* DÉCORATIONS D'ARRIÈRE-PLAN (Lumières floues) */}
+          {/* DÉCORATIONS D'ARRIÈRE-PLAN */}
           <div className="absolute top-0 right-0 w-[35rem] h-[35rem] bg-yellow-100 opacity-30 mix-blend-overlay rounded-full blur-[80px] -translate-y-1/2 translate-x-1/3" />
           <div className="absolute bottom-0 left-0 w-[35rem] h-[35rem] bg-emerald-900 opacity-30 mix-blend-multiply rounded-full blur-[80px] translate-y-1/3 -translate-x-1/3" />
 
@@ -26,9 +24,7 @@ export function ProductShowcase() {
               </h2>
 
               <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-lg">
-                PIAF est votre copilote urbain : une navigation adaptée, des
-                signalements en temps réel et des itinéraires plus fluides pour
-                retrouver une autonomie totale au quotidien.
+                PIAF est votre copilote urbain : une navigation adaptée, des signalements en temps réel et des itinéraires plus fluides pour retrouver une autonomie totale au quotidien.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
@@ -40,6 +36,7 @@ export function ProductShowcase() {
                 >
                   Remplir le questionnaire
                 </a>
+
                 <a
                   href="/download"
                   className="px-8 py-4 rounded-full bg-[#4AA171]/85 backdrop-blur-md border border-white/25 text-white font-medium shadow-lg shadow-black/12 hover:bg-[#4AA171]/95 hover:shadow-xl hover:shadow-black/15 transition-all transform hover:-translate-y-0.5 inline-block text-center"
@@ -49,10 +46,11 @@ export function ProductShowcase() {
               </div>
             </div>
 
-            {/* COLONNE DROITE : mockup */}
+            {/* COLONNE DROITE : IMAGE APPLICATION */}
             <div className="relative flex justify-center lg:justify-end">
-              {/* Rotation/hover sur wrapper */}
-              <div className="relative w-full max-w-md transform rotate-3 hover:rotate-0 transition-transform duration-300 ease-out">
+              {/* ✅ Rotation/hover sur wrapper */}
+              <div className="relative w-full max-w-md transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
+                {/* ✅ Float sur inner (sinon transform se chevauche) */}
                 <div className="piaf-float">
                   <img
                     src="/images/mockup_3D_navigation.png"
@@ -65,6 +63,7 @@ export function ProductShowcase() {
           </div>
           {/* Fin grille */}
         </div>
+        {/* Fin carte */}
       </div>
     </section>
   );
