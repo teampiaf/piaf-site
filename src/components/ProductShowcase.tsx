@@ -52,7 +52,7 @@ export function ProductShowcase() {
             {/* COLONNE DROITE : mockup */}
             <div className="relative flex justify-center lg:justify-end">
               {/* Rotation/hover sur wrapper */}
-              <div className="relative w-full max-w-md transform rotate-3 hover:rotate-0 transition-transform duration-500 ease-out">
+              <div className="relative w-full max-w-md transform rotate-3 hover:rotate-0 transition-transform duration-300 ease-out">
                 <div className="piaf-float">
                   <img
                     src="/images/mockup_3D_navigation.png"
