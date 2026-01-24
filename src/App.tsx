@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { Instagram, Linkedin } from "lucide-react";
 
 import { Hero } from "./components/Hero";
@@ -8,8 +8,13 @@ import { Team } from "./components/Team";
 import { Download } from "./components/Download";
 import { ProjectPage } from "./components/ProjectPage";
 import { HowItWorksPage } from "./components/HowItWorksPage";
-import { SecondaryBackground } from "./components/ui/SecondaryBackground";
 import { MentionsLegalesPage } from "./components/MentionsLegalesPage";
+
+import { SecondaryBackground } from "./components/ui/SecondaryBackground";
+import { CookieBanner } from "./components/CookieBanner";
+
+import { getCookieConsent, CookieConsentStatus } from "./lib/cookieConsent";
+import { loadGoogleAnalytics } from "./lib/analytics";
 
 export function App() {
   // -----------------------------
@@ -18,18 +23,50 @@ export function App() {
   const rawPath = window.location.pathname;
   const path = rawPath.replace(/\/+$/, "") || "/";
 
-  if (path === "/download") return <Download />;
+  // -----------------------------
+  // COOKIES
+  // -----------------------------
+  const [consent, setConsent] = useState<CookieConsentStatus | null>(() =>
+    getCookieConsent()
+  );
+
+  const gaId = useMemo(() => {
+    // Mets dans .env : VITE_GA_MEASUREMENT_ID=G-XXXXXXX
+    return (import.meta as any).env?.VITE_GA_MEASUREMENT_ID as string | undefined;
+  }, []);
+
+  useEffect(() => {
+    if (consent === "accepted" && gaId) {
+      loadGoogleAnalytics(gaId);
+    }
+  }, [consent, gaId]);
+
+  const withBanner = (node: React.ReactNode) => (
+    <>
+      {node}
+      {!consent && <CookieBanner onChoice={setConsent} />}
+    </>
+  );
+
+  // -----------------------------
+  // PAGES
+  // -----------------------------
+  if (path === "/download") return withBanner(<Download />);
+
   if (path === "/projet" || path === "/project" || path === "/decouvrir-le-projet")
-    return <ProjectPage />;
-  if (path === "/comment-ca-marche" || path === "/how-it-works") return <HowItWorksPage />;
-  if (path === "/mentions-legales" || path === "/mentions") return <MentionsLegalesPage />;
+    return withBanner(<ProjectPage />);
+
+  if (path === "/comment-ca-marche" || path === "/how-it-works")
+    return withBanner(<HowItWorksPage />);
+
+  if (path === "/mentions-legales" || path === "/mentions")
+    return withBanner(<MentionsLegalesPage />);
 
   // -----------------------------
   // HOME
   // -----------------------------
-  return (
+  return withBanner(
     <div className="min-h-screen relative overflow-hidden font-sans selection:bg-gray-50 selection:text-[#4AA171]">
-      {/* ✅ Fond pro (moins uni) */}
       <SecondaryBackground variant="home" />
 
       {/* HEADER */}
@@ -42,7 +79,7 @@ export function App() {
           />
         </div>
 
-        {/* ✅ Boutons header : jamais coupés + empilés sur mobile */}
+        {/* Boutons header */}
         <div className="absolute top-0 left-0 right-0 px-4 md:px-8 pt-4 sm:pt-5 md:pt-8">
           <div className="w-full max-w-7xl mx-auto flex justify-end">
             <div className="flex flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:gap-3 md:gap-4">
@@ -73,7 +110,7 @@ export function App() {
       </main>
 
       {/* FOOTER */}
-      <footer className="relative z-10 bg-white/25 backdrop-blur-xl py-12 px-4 text-center text-gray-600 text-sm border-t border-white/35">
+      <footer className="relative z-10 bg-transparent py-12 px-4 text-center text-gray-600 text-sm border-t border-white/35">
         <div className="flex justify-center gap-6 mb-10">
           <SocialFooterBtn
             icon={Instagram}
