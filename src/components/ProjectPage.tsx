@@ -71,16 +71,14 @@ export function ProjectPage() {
                   </li>
                 </ul>
 
-                {/* IMAGE PLACEHOLDER #1 (origine / équipe / première idée) */}
-               
+                {/* IMAGE PLACEHOLDER #1 (inversée) */}
                 <div className="mt-7 rounded-[2rem] overflow-hidden border border-white/25 bg-white/10">
                   <img
-                    src="/images/cheque_quatre.jpg"
+                    src="/images/kakemono_deux.jpg"
                     alt="Origine du projet PIAF"
                     className="w-full h-[240px] md:h-[320px] object-cover"
                   />
                 </div>
-                
               </div>
 
               <div className="lg:col-span-5 space-y-6">
@@ -103,16 +101,14 @@ export function ProjectPage() {
                     La reconnaissance officielle via le Challenge Innovation : un passage net de “l’idée” au “projet”.
                   </p>
 
-                  {/* IMAGE PLACEHOLDER #2 (pitch / presse / moment clé) */}
-                  
+                  {/* IMAGE PLACEHOLDER #2 (inversée) */}
                   <div className="mt-6 rounded-[2rem] overflow-hidden border border-white/25 bg-white/10">
                     <img
-                      src="/images/kakemono_deux.jpg"
+                      src="/images/cheque_quatre.jpg"
                       alt="Pitch devant le jury"
                       className="w-full h-[200px] object-cover"
                     />
                   </div>
-                  
                 </div>
               </div>
             </div>
@@ -123,16 +119,16 @@ export function ProjectPage() {
                 Validation officielle
               </h2>
 
-              {/* IMAGE PLACEHOLDER #3 (visuel large : ministère / cérémonie / photo de groupe) */}
-              
+              {/* IMAGE #3 (format non rogné) */}
               <div className="mb-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10">
-                <img
-                  src="/images/gros_bg.jpg"
-                  alt="Remise de prix au ministère"
-                  className="w-full h-[220px] md:h-[320px] object-cover"
-                />
+                <div className="w-full aspect-[16/9] bg-white/5">
+                  <img
+                    src="/images/gros_bg.jpg"
+                    alt="Remise de prix au ministère"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
-              
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Case 1 */}
@@ -174,7 +170,9 @@ export function ProjectPage() {
                 <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
                     <HeartHandshake className="w-5 h-5" />
-                    <h3 className="font-bold text-gray-800">Le pitch (jury officiel)</h3>
+                    <h3 className="font-bold text-gray-800">
+                      Le pitch (jury officiel)
+                    </h3>
                   </div>
 
                   <p className="text-gray-600 leading-relaxed">
@@ -188,7 +186,9 @@ export function ProjectPage() {
                     </li>
                     <li className="flex gap-3">
                       <span className="mt-2 w-2 h-2 rounded-full bg-[#4AA171]" />
-                      <span>Résultat : <strong>invitation à Paris</strong> pour la cérémonie de remise des prix.</span>
+                      <span>
+                        Résultat : <strong>invitation à Paris</strong> pour la cérémonie de remise des prix.
+                      </span>
                     </li>
                   </ul>
                 </div>
@@ -197,7 +197,9 @@ export function ProjectPage() {
                 <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
                     <Rocket className="w-5 h-5" />
-                    <h3 className="font-bold text-gray-800">1er prix (au ministère)</h3>
+                    <h3 className="font-bold text-gray-800">
+                      1er prix (au ministère)
+                    </h3>
                   </div>
 
                   <p className="text-gray-600 leading-relaxed">
@@ -207,7 +209,9 @@ export function ProjectPage() {
                   <ul className="mt-4 space-y-2 text-gray-600">
                     <li className="flex gap-3">
                       <span className="mt-2 w-2 h-2 rounded-full bg-[#4AA171]" />
-                      <span>Dotation : <strong>12 000€</strong> pour accélérer la concrétisation.</span>
+                      <span>
+                        Dotation : <strong>12 000€</strong> pour accélérer la concrétisation.
+                      </span>
                     </li>
                     <li className="flex gap-3">
                       <span className="mt-2 w-2 h-2 rounded-full bg-[#4AA171]" />
@@ -217,21 +221,23 @@ export function ProjectPage() {
                 </div>
               </div>
 
-              {/* IMAGE PLACEHOLDER #4 (visuel “après” : applis / maquette / capture) */}
-              
+              {/* IMAGE #4 (format non rogné) */}
               <div className="mt-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10">
-                <img
-                  src="/images/scene_remise.jpg"
-                  alt="Mockups ou aperçu de l'application PIAF"
-                  className="w-full h-[220px] md:h-[320px] object-cover"
-                />
+                <div className="w-full aspect-[16/9] bg-white/5">
+                  <img
+                    src="/images/scene_remise.jpg"
+                    alt="Aperçu du projet PIAF"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
               </div>
-              
             </div>
 
             {/* CONCLUSION */}
             <div className="mt-12 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
-              <h3 className="text-xl md:text-2xl font-bold text-gray-800">Et maintenant ?</h3>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-800">
+                Et maintenant ?
+              </h3>
               <p className="mt-3 text-gray-600 leading-relaxed text-lg max-w-4xl">
                 Notre priorité : transformer PIAF en une expérience simple et fiable — claire dès la première utilisation, et pensée pour aider à se déplacer avec plus de confiance.
               </p>
@@ -253,7 +259,6 @@ export function ProjectPage() {
                 Télécharger l&apos;App
               </a>
             </div>
-
           </div>
         </div>
       </div>
