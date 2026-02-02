@@ -53,13 +53,13 @@ export function ProjectPage() {
                   <li className="flex gap-3">
                     <span className="mt-2 w-2 h-2 rounded-full bg-[#4AA171]" />
                     <span>
-                      <strong>Origine :</strong> projet d’école (spécialité S3E) → obligation de proposer une innovation utile et réaliste.
+                      <strong>Origine :</strong> Nous sommes 4 étudiants ingénieurs et nous voulions lancer une innovation utile et réaliste pour notre projet d'école.
                     </span>
                   </li>
                   <li className="flex gap-3">
                     <span className="mt-2 w-2 h-2 rounded-full bg-[#4AA171]" />
                     <span>
-                      <strong>Déclencheur :</strong> une amie commune a eu un accident de voiture et s’est retrouvée paraplégique.
+                      <strong>Déclencheur :</strong> Une amie commune a eu un accident de voiture suite auquel elle est devenue paraplégique.
                     </span>
                   </li>
                   <li className="flex gap-3">
@@ -80,6 +80,7 @@ export function ProjectPage() {
                   />
                 </div>
                 */}
+
               </div>
 
               <div className="lg:col-span-5 space-y-6">
@@ -127,7 +128,7 @@ export function ProjectPage() {
                 <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
                     <Trophy className="w-5 h-5" />
-                    <h3 className="font-bold text-gray-800">Le Challenge (État français)</h3>
+                    <h3 className="font-bold text-gray-800">Le Challenge (Ministère de l'intérieur)</h3>
                   </div>
 
                   <p className="text-gray-600 leading-relaxed">
@@ -174,7 +175,7 @@ export function ProjectPage() {
                     </li>
                     <li className="flex gap-3">
                       <span className="mt-2 w-2 h-2 rounded-full bg-[#4AA171]" />
-                      <span>Résultat : <strong>Top 3</strong> + invitation à Paris.</span>
+                      <span>Résultat : <strong>invitation à Paris</strong> pour la cérémonie de remise des prix.</span>
                     </li>
                   </ul>
                 </div>
@@ -187,7 +188,7 @@ export function ProjectPage() {
                   </div>
 
                   <p className="text-gray-600 leading-relaxed">
-                    Remise de prix <strong>au ministère</strong> à Paris : PIAF remporte le <strong>1er prix</strong>.
+                    Remise de prix <strong>à Paris</strong> : PIAF remporte le <strong>1er prix</strong>.
                   </p>
 
                   <ul className="mt-4 space-y-2 text-gray-600">

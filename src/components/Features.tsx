@@ -6,7 +6,7 @@ import { Map, Zap, Users, Shield } from 'lucide-react';
 const features = [
   {
     title: 'Navigation Adaptée',
-    description: "Un GPS qui connaît vos limites. Il calcule le trajet le plus fluide et contourne les obstacles en temps réel pour ne plus jamais être stoppé.",
+    description: "Un GPS qui connaît vos besoin. Il calcule le trajet le plus fluide et contourne les obstacles en temps réel pour ne plus jamais être stoppé.",
     icon: Map, // Icone Carte pour le GPS
     delay: '0ms' // Pas de délai, s'affiche tout de suite
   },
