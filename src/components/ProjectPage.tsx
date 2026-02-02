@@ -15,6 +15,7 @@ export function ProjectPage() {
   return (
     <div className="min-h-screen relative overflow-hidden font-sans selection:bg-gray-50 selection:text-[#4AA171]">
       <SecondaryBackground variant="project" />
+
       <div className="relative z-10 px-4 md:px-8 py-10 max-w-6xl mx-auto">
         {/* RETOUR */}
         <a
@@ -26,10 +27,10 @@ export function ProjectPage() {
         </a>
 
         {/* BLOC PRINCIPAL (Liquid Glass) */}
-        <div className="mt-6 relative bg-white/16 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-8 md:p-14 border border-white/28 shadow-2xl shadow-black/10 overflow-hidden">
+        <div className="mt-6 relative bg-white/20 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-8 md:p-14 border border-white/30 shadow-2xl shadow-black/10 overflow-hidden">
           {/* Lumières internes pour relief */}
           <div className="absolute -top-24 -right-24 w-[22rem] h-[22rem] bg-yellow-100/35 rounded-full blur-[80px]" />
-          <div className="absolute -bottom-24 -left-24 w-[22rem] h-[22rem] bg-emerald-900/14 rounded-full blur-[90px]" />
+          <div className="absolute -bottom-24 -left-24 w-[22rem] h-[22rem] bg-emerald-900/15 rounded-full blur-[90px]" />
 
           <div className="relative z-10">
             {/* Badge */}
@@ -44,7 +45,7 @@ export function ProjectPage() {
 
             {/* INTRO (aérée) */}
             <div className="mt-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
-              <div className="lg:col-span-7 bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
+              <div className="lg:col-span-7 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
                   Les points clés
                 </h2>
@@ -70,21 +71,20 @@ export function ProjectPage() {
                   </li>
                 </ul>
 
-                {/* IMAGE PLACEHOLDER #1 */}
-                {/*
+                {/* IMAGE PLACEHOLDER #1 (origine / équipe / première idée) */}
+               
                 <div className="mt-7 rounded-[2rem] overflow-hidden border border-white/25 bg-white/10">
                   <img
-                    src="/images/projet_origine.jpg"
+                    src="/images/cheque_quatre.jpg"
                     alt="Origine du projet PIAF"
                     className="w-full h-[240px] md:h-[320px] object-cover"
                   />
                 </div>
-                */}
-
+                
               </div>
 
               <div className="lg:col-span-5 space-y-6">
-                <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
+                <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-2 text-[#4AA171] font-bold mb-2">
                     <Quote className="w-4 h-4" />
                     Notre objectif
@@ -94,7 +94,7 @@ export function ProjectPage() {
                   </p>
                 </div>
 
-                <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
+                <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-2 text-[#4AA171] font-bold mb-2">
                     <BadgeCheck className="w-4 h-4" />
                     Ce qui a tout accéléré
@@ -103,32 +103,45 @@ export function ProjectPage() {
                     La reconnaissance officielle via le Challenge Innovation : un passage net de “l’idée” au “projet”.
                   </p>
 
-                  {/* IMAGE PLACEHOLDER #2 */}
-                  {/*
+                  {/* IMAGE PLACEHOLDER #2 (pitch / presse / moment clé) */}
+                  
                   <div className="mt-6 rounded-[2rem] overflow-hidden border border-white/25 bg-white/10">
                     <img
-                      src="/images/projet_paris_ministere.jpg"
-                      alt="Remise de prix au ministère"
+                      src="/images/kakemono_deux.jpg"
+                      alt="Pitch devant le jury"
                       className="w-full h-[200px] object-cover"
                     />
                   </div>
-                  */}
+                  
                 </div>
               </div>
             </div>
 
-            {/* SECTION VALIDATION (3 cases par points) */}
+            {/* SECTION VALIDATION */}
             <div className="mt-12">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-6">
                 Validation officielle
               </h2>
 
+              {/* IMAGE PLACEHOLDER #3 (visuel large : ministère / cérémonie / photo de groupe) */}
+              
+              <div className="mb-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10">
+                <img
+                  src="/images/gros_bg.jpg"
+                  alt="Remise de prix au ministère"
+                  className="w-full h-[220px] md:h-[320px] object-cover"
+                />
+              </div>
+              
+
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Case 1 */}
-                <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
+                <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
                     <Trophy className="w-5 h-5" />
-                    <h3 className="font-bold text-gray-800">Le Challenge (Ministère de l'intérieur)</h3>
+                    <h3 className="font-bold text-gray-800">
+                      Le Challenge (Ministère de l'intérieur)
+                    </h3>
                   </div>
 
                   <p className="text-gray-600 leading-relaxed">
@@ -158,7 +171,7 @@ export function ProjectPage() {
                 </div>
 
                 {/* Case 2 */}
-                <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
+                <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
                     <HeartHandshake className="w-5 h-5" />
                     <h3 className="font-bold text-gray-800">Le pitch (jury officiel)</h3>
@@ -181,7 +194,7 @@ export function ProjectPage() {
                 </div>
 
                 {/* Case 3 */}
-                <div className="bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
+                <div className="bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2rem] p-6 shadow-lg shadow-black/10">
                   <div className="flex items-center gap-3 mb-3 text-[#4AA171]">
                     <Rocket className="w-5 h-5" />
                     <h3 className="font-bold text-gray-800">1er prix (au ministère)</h3>
@@ -203,10 +216,21 @@ export function ProjectPage() {
                   </ul>
                 </div>
               </div>
+
+              {/* IMAGE PLACEHOLDER #4 (visuel “après” : applis / maquette / capture) */}
+              
+              <div className="mt-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10">
+                <img
+                  src="/images/projet_mockups.jpg"
+                  alt="Mockups ou aperçu de l'application PIAF"
+                  className="w-full h-[220px] md:h-[320px] object-cover"
+                />
+              </div>
+              
             </div>
 
             {/* CONCLUSION */}
-            <div className="mt-12 bg-white/14 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
+            <div className="mt-12 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <h3 className="text-xl md:text-2xl font-bold text-gray-800">Et maintenant ?</h3>
               <p className="mt-3 text-gray-600 leading-relaxed text-lg max-w-4xl">
                 Notre priorité : transformer PIAF en une expérience simple et fiable — claire dès la première utilisation, et pensée pour aider à se déplacer avec plus de confiance.
@@ -229,6 +253,7 @@ export function ProjectPage() {
                 Télécharger l&apos;App
               </a>
             </div>
+
           </div>
         </div>
       </div>
