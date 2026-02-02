@@ -32,8 +32,7 @@ export function Download() {
           <p className="text-xl text-gray-700/90 mb-10 leading-relaxed">
             L&apos;application PIAF est actuellement en cours de finalisation.
             <br className="hidden md:block" />
-            La version <strong>Bêta</strong> sera disponible dans quelques jours sur iOS et
-            Android.
+            La version <strong>Bêta</strong> sera disponible bientôt sur iOS et Android.
           </p>
 
           <div className="w-16 h-1 bg-white/30 rounded-full mx-auto mb-10" />
