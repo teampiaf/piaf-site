@@ -221,7 +221,7 @@ export function ProjectPage() {
               
               <div className="mt-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10">
                 <img
-                  src="/images/projet_mockups.jpg"
+                  src="/images/scene_remise.jpg"
                   alt="Mockups ou aperçu de l'application PIAF"
                   className="w-full h-[220px] md:h-[320px] object-cover"
                 />
