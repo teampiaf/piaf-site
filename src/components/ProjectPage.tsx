@@ -76,9 +76,10 @@ export function ProjectPage() {
                   <img
                     src="/images/kakemono_deux.jpg"
                     alt="Origine du projet PIAF"
-                    className="w-full h-[260px] md:h-[360px] object-cover object-top"
+                    className="w-full h-[260px] md:h-[340px] object-cover object-center"
                   />
                 </div>
+
               </div>
 
               <div className="lg:col-span-5 space-y-6">
@@ -120,13 +121,14 @@ export function ProjectPage() {
               </h2>
 
               {/* IMAGE PLACEHOLDER #3 (visuel large : ministère / cérémonie / photo de groupe) */}
-              <div className="mb-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10 p-3 md:p-4">
+              <div className="mb-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10">
                 <img
                   src="/images/gros_bg.jpg"
                   alt="Remise de prix au ministère"
-                  className="w-full h-auto max-h-[340px] md:max-h-[520px] object-contain"
+                  className="w-full h-[240px] md:h-[340px] object-contain bg-white/5"
                 />
               </div>
+
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Case 1 */}
