@@ -37,7 +37,7 @@ export function MentionsLegalesPage() {
                 <br />
                 <strong>Email :</strong> piaf.contact@gmail.com
                 <br />
-                <strong>Directeur / responsable de publication :</strong> Orion PRUDHOMME (Président)
+                <strong>Directeur / responsable de publication :</strong> Orion PRUDHOMME (Président) / Rafaël RACZ (Vice Président)
               </p>
             </section>
 
