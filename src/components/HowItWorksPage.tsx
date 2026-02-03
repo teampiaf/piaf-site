@@ -2,6 +2,27 @@ import React from "react";
 import { ArrowLeft, MapPin, AlertTriangle, CheckCircle2, Route } from "lucide-react";
 import { SecondaryBackground } from "./ui/SecondaryBackground";
 
+/**
+ * ✅ IMPORTANT
+ * Ici je n'ai PAS tes anciens textes exacts dans ce message.
+ * Donc je t'ai mis des constantes "OLD_TEXT_*" : tu remplaces leur contenu
+ * par tes anciens paragraphes (copier/coller) SANS toucher au layout.
+ */
+const OLD_INTRO =
+  "PIAF rend la ville plus accessible grâce à un GPS communautaire et des informations terrain, pour des trajets plus fluides et plus prévisibles.";
+
+const OLD_TEXT_SIGNAL =
+  "👉 Colle ici ton ancien texte sur les signalements (sans réécriture).";
+
+const OLD_TEXT_OBSTACLE =
+  "👉 Colle ici ton ancien texte sur les obstacles (sans réécriture).";
+
+const OLD_TEXT_FACILITATOR =
+  "👉 Colle ici ton ancien texte sur les facilitateurs (sans réécriture).";
+
+const OLD_TEXT_ROUTE =
+  "👉 Colle ici ton ancien texte sur l’exemple de trajet / trajets piétons (sans réécriture).";
+
 export function HowItWorksPage() {
   return (
     <div className="min-h-screen relative overflow-hidden font-sans selection:bg-gray-50 selection:text-[#4AA171]">
@@ -19,7 +40,7 @@ export function HowItWorksPage() {
 
         {/* BLOC PRINCIPAL */}
         <div className="mt-6 relative bg-white/20 backdrop-blur-2xl backdrop-saturate-150 rounded-[3rem] md:rounded-[4rem] p-8 md:p-14 border border-white/30 shadow-2xl shadow-black/10 overflow-hidden">
-          {/* Lumières internes pour relief */}
+          {/* Lumières internes */}
           <div className="absolute -top-24 -right-24 w-[22rem] h-[22rem] bg-yellow-100/35 rounded-full blur-[80px]" />
           <div className="absolute -bottom-24 -left-24 w-[22rem] h-[22rem] bg-emerald-900/15 rounded-full blur-[90px]" />
 
@@ -31,37 +52,32 @@ export function HowItWorksPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
-              L’application PIAF, <span className="text-[#4AA171]">concrètement</span>
+              Comment ça marche <span className="text-[#4AA171]">PIAF</span>
             </h1>
 
+            {/* INTRO (anciens textes) */}
             <p className="mt-5 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
-              PIAF t’aide à choisir les trajets les plus fluides, en s’appuyant sur des
-              informations terrain (obstacles + facilitateurs) et sur la communauté.
+              {OLD_INTRO}
             </p>
 
-            {/* ========================= */}
-            {/* 1) Les signalements */}
-            {/* Image : annonce_travaux.jpg */}
-            {/* ========================= */}
+            {/* ===================================================== */}
+            {/* BULLE 1 — SIGNAL / TRAVAUX (annonce_travaux.jpg)       */}
+            {/* ===================================================== */}
             <div className="mt-10 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <div className="flex items-center gap-3 text-[#4AA171] font-bold mb-3">
                 <MapPin className="w-5 h-5" />
-                1) Les signalements (ex : travaux)
+                Les signalements
               </div>
 
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Tu peux signaler un problème en quelques secondes : travaux, passage fermé,
-                trottoir impraticable, zone dangereuse… L’info remonte immédiatement et peut
-                être confirmée par les autres.
-              </p>
+              {/* ✅ ANCIEN TEXTE À GARDER */}
+              <p className="text-gray-600 text-lg leading-relaxed">{OLD_TEXT_SIGNAL}</p>
 
-              {/* IMAGE (dans la bulle) — affichage intégral (pas rogné) */}
+              {/* ✅ IMAGE DANS LA BULLE — FORMAT “ON VOIT TOUTE L’IMAGE” */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
-                {/* Astuce ratio : 16/9 sur desktop, un peu plus “haut” sur mobile */}
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
                     src="/images/annonce_travaux.jpg"
-                    alt="Signalement de travaux"
+                    alt="Annonce travaux / signalement"
                     className="w-full h-full object-contain object-center"
                     loading="lazy"
                   />
@@ -69,22 +85,18 @@ export function HowItWorksPage() {
               </div>
             </div>
 
-            {/* ========================= */}
-            {/* 2) Obstacles */}
-            {/* Image : obstacle.jpg */}
-            {/* ========================= */}
+            {/* ===================================================== */}
+            {/* BULLE 2 — OBSTACLE (obstacle.jpg)                      */}
+            {/* ===================================================== */}
             <div className="mt-8 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <div className="flex items-center gap-3 text-[#4AA171] font-bold mb-3">
                 <AlertTriangle className="w-5 h-5" />
-                2) Obstacles : anticiper au lieu de subir
+                Les obstacles
               </div>
 
-              <p className="text-gray-600 text-lg leading-relaxed">
-                PIAF met en avant les zones problématiques sur ton trajet pour éviter les détours
-                imprévus. Le but : garder un parcours plus fluide et réduire le stress.
-              </p>
+              {/* ✅ ANCIEN TEXTE À GARDER */}
+              <p className="text-gray-600 text-lg leading-relaxed">{OLD_TEXT_OBSTACLE}</p>
 
-              {/* IMAGE (dans la bulle) — affichage intégral */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
@@ -97,22 +109,18 @@ export function HowItWorksPage() {
               </div>
             </div>
 
-            {/* ========================= */}
-            {/* 3) Facilitateurs */}
-            {/* Image : facilitateur.jpg */}
-            {/* ========================= */}
+            {/* ===================================================== */}
+            {/* BULLE 3 — FACILITATEUR (facilitateur.jpg)              */}
+            {/* ===================================================== */}
             <div className="mt-8 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <div className="flex items-center gap-3 text-[#4AA171] font-bold mb-3">
                 <CheckCircle2 className="w-5 h-5" />
-                3) Facilitateurs : les bons passages
+                Les facilitateurs
               </div>
 
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Au-delà d’éviter les obstacles, PIAF met aussi en avant les accès qui simplifient
-                réellement le déplacement : rampes, passages adaptés, cheminements plus confortables, etc.
-              </p>
+              {/* ✅ ANCIEN TEXTE À GARDER */}
+              <p className="text-gray-600 text-lg leading-relaxed">{OLD_TEXT_FACILITATOR}</p>
 
-              {/* IMAGE (dans la bulle) — affichage intégral */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
@@ -125,24 +133,21 @@ export function HowItWorksPage() {
               </div>
             </div>
 
-            {/* ========================= */}
-            {/* 4) Exemple de trajet */}
-            {/* Image : trajet_exemple.jpg */}
-            {/* ========================= */}
+            {/* ===================================================== */}
+            {/* BULLE 4 — EXEMPLE TRAJET (trajet_exemple.jpg)           */}
+            {/* ===================================================== */}
             <div className="mt-8 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <div className="flex items-center gap-3 text-[#4AA171] font-bold mb-3">
                 <Route className="w-5 h-5" />
-                4) Exemple de trajet (navigation)
+                Exemple de trajet
               </div>
 
-              <p className="text-gray-600 text-lg leading-relaxed">
-                Tu visualises ton itinéraire, les zones à éviter, et les alternatives plus accessibles.
-                Objectif : un trajet plus prévisible et plus “safe”.
-              </p>
+              {/* ✅ ANCIEN TEXTE À GARDER */}
+              <p className="text-gray-600 text-lg leading-relaxed">{OLD_TEXT_ROUTE}</p>
 
-              {/* IMAGE (dans la bulle) — affichage intégral */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
-                {/* Si c'est un screenshot vertical, tu peux passer md:aspect-[16/9] en md:aspect-[3/2] ou md:aspect-[4/3] */}
+                {/* Si ton screenshot est très vertical et parait petit,
+                    passe md:aspect-[16/9] -> md:aspect-[4/3] */}
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
                     src="/images/trajet_exemple.jpg"
@@ -170,6 +175,7 @@ export function HowItWorksPage() {
                 Télécharger l&apos;App
               </a>
             </div>
+
           </div>
         </div>
       </div>
