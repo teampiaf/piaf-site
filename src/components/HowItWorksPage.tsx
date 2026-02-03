@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowLeft, MapPin, AlertTriangle, CheckCircle2, Route } from "lucide-react";
+import { ArrowLeft, MapPin, CheckCircle2, AlertTriangle, Route } from "lucide-react";
 import { SecondaryBackground } from "./ui/SecondaryBackground";
 
 export function HowItWorksPage() {
@@ -31,14 +31,8 @@ export function HowItWorksPage() {
             </div>
 
             <h1 className="text-4xl md:text-6xl font-bold text-gray-800 leading-tight">
-              PIAF, en version <span className="text-[#4AA171]">simple</span>
+              Comment ça marche <span className="text-[#4AA171]">PIAF</span>
             </h1>
-
-            {/* INTRO (ancien texte) */}
-            <p className="mt-5 text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl">
-              Le but : rendre tes trajets plus fluides, plus prévisibles et plus sereins.
-              PIAF te guide, et s’appuie sur la communauté pour garder l’info à jour.
-            </p>
 
             {/* ========================= */}
             {/* 1) Les signalements */}
@@ -50,19 +44,18 @@ export function HowItWorksPage() {
                 1) Les signalements
               </div>
 
-              {/* ancien texte */}
               <p className="text-gray-600 text-lg leading-relaxed">
                 Tu peux signaler en quelques secondes un obstacle ou une situation temporaire
                 (travaux, passage fermé, trottoir impraticable…). Les autres utilisateurs peuvent
                 confirmer/actualiser pour garder une donnée fiable.
               </p>
 
-              {/* image dans la bulle — on voit toute l'image */}
+              {/* Image — format complet */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
                     src="/images/annonce_travaux.jpg"
-                    alt="Signalement de travaux"
+                    alt="Signalement (travaux, passage fermé...)"
                     className="w-full h-full object-contain object-center"
                     loading="lazy"
                   />
@@ -72,7 +65,7 @@ export function HowItWorksPage() {
 
             {/* ========================= */}
             {/* 2) Validation communautaire */}
-            {/* Image : trajet_exemple.jpg (le plus logique pour illustrer un exemple de navigation/validation) */}
+            {/* Image : trajet_exemple.jpg */}
             {/* ========================= */}
             <div className="mt-8 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <div className="flex items-center gap-3 text-[#4AA171] font-bold mb-3">
@@ -80,20 +73,19 @@ export function HowItWorksPage() {
                 2) Validation communautaire
               </div>
 
-              {/* ancien texte */}
               <p className="text-gray-600 text-lg leading-relaxed">
                 Plus une info est confirmée, plus elle devient prioritaire dans la navigation.
                 Objectif : éviter les “mauvaises surprises” au dernier moment.
               </p>
 
-              {/* image dans la bulle — on voit toute l'image */}
+              {/* Image — format complet */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
-                {/* Si ton trajet_exemple est très vertical et paraît petit,
+                {/* Si l'image est très verticale et paraît petite,
                     change md:aspect-[16/9] -> md:aspect-[4/3] */}
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
                     src="/images/trajet_exemple.jpg"
-                    alt="Exemple de trajet"
+                    alt="Exemple de trajet / validation communautaire"
                     className="w-full h-full object-contain object-center"
                     loading="lazy"
                   />
@@ -101,28 +93,27 @@ export function HowItWorksPage() {
               </div>
             </div>
 
-            {/* =================== */}
+            {/* ========================= */}
             {/* 3) Obstacles */}
             {/* Image : obstacle.jpg */}
-            {/* =================== */}
+            {/* ========================= */}
             <div className="mt-8 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <div className="flex items-center gap-3 text-[#4AA171] font-bold mb-3">
                 <AlertTriangle className="w-5 h-5" />
                 3) Obstacles : anticiper plutôt que subir
               </div>
 
-              {/* ancien texte */}
               <p className="text-gray-600 text-lg leading-relaxed">
-                PIAF identifie les zones à risque sur l’itinéraire.
-                Tu vois ce qui t’attend avant d’y être, et tu peux choisir un passage plus fluide.
+                PIAF identifie les zones à risque sur l’itinéraire. Tu vois ce qui t’attend avant
+                d’y être, et tu peux choisir un passage plus fluide.
               </p>
 
-              {/* image dans la bulle — on voit toute l'image */}
+              {/* Image — format complet */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
                     src="/images/obstacle.jpg"
-                    alt="Exemple d'obstacle"
+                    alt="Obstacle"
                     className="w-full h-full object-contain object-center"
                     loading="lazy"
                   />
@@ -130,28 +121,27 @@ export function HowItWorksPage() {
               </div>
             </div>
 
-            {/* ======================= */}
+            {/* ========================= */}
             {/* 4) Facilitateurs */}
             {/* Image : facilitateur.jpg */}
-            {/* ======================= */}
+            {/* ========================= */}
             <div className="mt-8 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <div className="flex items-center gap-3 text-[#4AA171] font-bold mb-3">
                 <CheckCircle2 className="w-5 h-5" />
                 4) Facilitateurs : les “bons passages”
               </div>
 
-              {/* ancien texte */}
               <p className="text-gray-600 text-lg leading-relaxed">
                 Au-delà d’éviter les obstacles, PIAF met en avant les passages qui facilitent réellement
                 la mobilité (rampe, accès PMR, cheminement plus large, zone plus roulante…).
               </p>
 
-              {/* image dans la bulle — on voit toute l'image */}
+              {/* Image — format complet */}
               <div className="mt-6 w-full rounded-[1.75rem] overflow-hidden">
                 <div className="w-full aspect-[4/3] md:aspect-[16/9]">
                   <img
                     src="/images/facilitateur.jpg"
-                    alt="Exemple de facilitateur"
+                    alt="Facilitateur"
                     className="w-full h-full object-contain object-center"
                     loading="lazy"
                   />
@@ -159,7 +149,9 @@ export function HowItWorksPage() {
               </div>
             </div>
 
-            {/* CONCLUSION + CTA (ancien esprit) */}
+            {/* ========================= */}
+            {/* En résumé */}
+            {/* ========================= */}
             <div className="mt-12 bg-white/15 backdrop-blur-xl border border-white/25 rounded-[2.5rem] p-7 shadow-lg shadow-black/10">
               <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
                 En résumé
