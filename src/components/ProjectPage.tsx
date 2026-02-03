@@ -70,16 +70,6 @@ export function ProjectPage() {
                     </span>
                   </li>
                 </ul>
-
-                {/* IMAGE PLACEHOLDER #1 (origine / équipe / première idée) */}
-                <div className="mt-7 rounded-[2rem] overflow-hidden border border-white/25 bg-white/10">
-                  <img
-                    src="/images/kakemono_deux.jpg"
-                    alt="Origine du projet PIAF"
-                    className="w-full h-[260px] md:h-[340px] object-cover object-center"
-                  />
-                </div>
-
               </div>
 
               <div className="lg:col-span-5 space-y-6">
@@ -101,17 +91,42 @@ export function ProjectPage() {
                   <p className="text-gray-600 leading-relaxed text-lg">
                     La reconnaissance officielle via le Challenge Innovation : un passage net de “l’idée” au “projet”.
                   </p>
-
-                  {/* IMAGE PLACEHOLDER #2 (pitch / presse / moment clé) */}
-                  <div className="mt-6 rounded-[2rem] overflow-hidden border border-white/25 bg-white/10">
-                    <img
-                      src="/images/cheque_quatre.jpg"
-                      alt="Pitch devant le jury"
-                      className="w-full h-[200px] object-cover"
-                    />
-                  </div>
                 </div>
               </div>
+            </div>
+
+            {/* ====== IMAGES (BRUTES) — 4 EMPLACEMENTS ====== */}
+            {/* ⚠️ Pas de “case glassy” : pas de bg/border/shadow. Tu mets juste l’image. */}
+
+            {/* IMAGE #1 — Sous “Les points clés” (intro) */}
+            {/* Recadrage conseillé : 16:9
+               Tailles à préparer : 1600x900 (idéal) ou 1920x1080
+               Objectif : photo équipe / origine / moment clé
+               Affichage : hauteur automatique, pas de rognage obligatoire si tu utilises object-cover */
+            }
+            <div className="mt-8 rounded-[2rem] overflow-hidden">
+              
+              <img
+                src="/images/cheque_quatre_16-9.jpg"
+                alt="Origine du projet PIAF"
+                className="w-full h-[240px] md:h-[340px] object-cover object-center"
+              />
+              
+            </div>
+
+            {/* IMAGE #2 — Juste après l’intro (petite image contextuelle) */}
+            {/* Recadrage conseillé : 4:3
+               Tailles à préparer : 1200x900 (idéal) ou 1600x1200
+               Objectif : pitch / affichage / kakemono / “avant Paris”
+             */}
+            <div className="mt-8 rounded-[2rem] overflow-hidden">
+              
+              <img
+                src="/images/kakemono_4-3.jpg"
+                alt="Pitch / moment clé"
+                className="w-full h-[220px] md:h-[320px] object-cover object-center"
+              />
+              
             </div>
 
             {/* SECTION VALIDATION */}
@@ -120,15 +135,22 @@ export function ProjectPage() {
                 Validation officielle
               </h2>
 
-              {/* IMAGE PLACEHOLDER #3 (visuel large : ministère / cérémonie / photo de groupe) */}
-              <div className="mb-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10">
+              {/* IMAGE #3 — Grande image rectangulaire (cérémonie / ministère / photo groupe) */}
+              {/* Recadrage conseillé : 21:9 (cinéma) OU 16:9 si tu préfères
+                 Tailles à préparer :
+                   - 21:9 => 2100x900 (idéal) ou 2520x1080
+                   - 16:9 => 1920x1080
+                 Conseil : si ta photo est “haute”, prends 16:9.
+               */}
+              <div className="mb-6 rounded-[2.5rem] overflow-hidden">
+                
                 <img
-                  src="/images/gros_bg.jpg"
+                  src="/images/cheque_remise_21-9.jpg"
                   alt="Remise de prix au ministère"
-                  className="w-full h-[240px] md:h-[340px] object-contain bg-white/5"
+                  className="w-full h-[240px] md:h-[360px] object-cover object-center"
                 />
+                
               </div>
-
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Case 1 */}
@@ -213,13 +235,20 @@ export function ProjectPage() {
                 </div>
               </div>
 
-              {/* IMAGE PLACEHOLDER #4 (visuel “après” : applis / maquette / capture) */}
-              <div className="mt-6 rounded-[2.5rem] overflow-hidden border border-white/25 bg-white/10 shadow-lg shadow-black/10 p-3 md:p-4">
+              {/* IMAGE #4 — Grande image “après” (mockup / capture appli / progression) */}
+              {/* Recadrage conseillé : 3:2 (super pour mockups) OU 16:9
+                 Tailles à préparer :
+                   - 3:2 => 1800x1200 (idéal) ou 1500x1000
+                   - 16:9 => 1920x1080
+               */}
+              <div className="mt-6 rounded-[2.5rem] overflow-hidden">
+                
                 <img
-                  src="/images/scene_remise.jpg"
-                  alt="Mockups ou aperçu de l'application PIAF"
-                  className="w-full h-auto max-h-[340px] md:max-h-[520px] object-contain"
+                  src="/images/gros_bg_3-2.jpg"
+                  alt="Aperçu de l'application PIAF"
+                  className="w-full h-[240px] md:h-[360px] object-cover object-center"
                 />
+                
               </div>
             </div>
 
