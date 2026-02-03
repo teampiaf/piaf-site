@@ -98,35 +98,32 @@ export function ProjectPage() {
             {/* ====== IMAGES (BRUTES) — 4 EMPLACEMENTS ====== */}
             {/* ⚠️ Pas de “case glassy” : pas de bg/border/shadow. Tu mets juste l’image. */}
 
-            {/* IMAGE #1 — Sous “Les points clés” (intro) */}
-            {/* Recadrage conseillé : 16:9
-               Tailles à préparer : 1600x900 (idéal) ou 1920x1080
-               Objectif : photo équipe / origine / moment clé
-               Affichage : hauteur automatique, pas de rognage obligatoire si tu utilises object-cover */
-            }
+            {/* IMAGE #1 — 16:9 */}
             <div className="mt-8 rounded-[2rem] overflow-hidden">
-              
               <img
                 src="/images/cheque_quatre_16-9.jpg"
                 alt="Origine du projet PIAF"
-                className="w-full h-[240px] md:h-[340px] object-cover object-center"
+                className="
+                  w-full
+                  h-[190px] sm:h-[230px] md:h-[320px] lg:h-[360px]
+                  object-cover object-center
+                "
+                loading="lazy"
               />
-              
             </div>
 
-            {/* IMAGE #2 — Juste après l’intro (petite image contextuelle) */}
-            {/* Recadrage conseillé : 4:3
-               Tailles à préparer : 1200x900 (idéal) ou 1600x1200
-               Objectif : pitch / affichage / kakemono / “avant Paris”
-             */}
+            {/* IMAGE #2 — 4:3 */}
             <div className="mt-8 rounded-[2rem] overflow-hidden">
-              
               <img
                 src="/images/kakemono_4-3.jpg"
                 alt="Pitch / moment clé"
-                className="w-full h-[220px] md:h-[320px] object-cover object-center"
+                className="
+                  w-full
+                  h-[220px] sm:h-[260px] md:h-[320px] lg:h-[380px]
+                  object-cover object-center
+                "
+                loading="lazy"
               />
-              
             </div>
 
             {/* SECTION VALIDATION */}
@@ -135,21 +132,19 @@ export function ProjectPage() {
                 Validation officielle
               </h2>
 
-              {/* IMAGE #3 — Grande image rectangulaire (cérémonie / ministère / photo groupe) */}
-              {/* Recadrage conseillé : 21:9 (cinéma) OU 16:9 si tu préfères
-                 Tailles à préparer :
-                   - 21:9 => 2100x900 (idéal) ou 2520x1080
-                   - 16:9 => 1920x1080
-                 Conseil : si ta photo est “haute”, prends 16:9.
-               */}
+              {/* IMAGE #3 — 21:9 (panoramique) */}
+              {/* Ici: object-contain pour éviter que ça coupe trop sur mobile */}
               <div className="mb-6 rounded-[2.5rem] overflow-hidden">
-                
                 <img
-                  src="/images/cheque_remise_21-9.jpg"
+                  src="/images/cheque_remise_21-9.png"
                   alt="Remise de prix au ministère"
-                  className="w-full h-[240px] md:h-[360px] object-cover object-center"
+                  className="
+                    w-full
+                    h-[160px] sm:h-[190px] md:h-[240px] lg:h-[280px]
+                    object-contain object-center
+                  "
+                  loading="lazy"
                 />
-                
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -235,20 +230,18 @@ export function ProjectPage() {
                 </div>
               </div>
 
-              {/* IMAGE #4 — Grande image “après” (mockup / capture appli / progression) */}
-              {/* Recadrage conseillé : 3:2 (super pour mockups) OU 16:9
-                 Tailles à préparer :
-                   - 3:2 => 1800x1200 (idéal) ou 1500x1000
-                   - 16:9 => 1920x1080
-               */}
+              {/* IMAGE #4 — 3:2 */}
               <div className="mt-6 rounded-[2.5rem] overflow-hidden">
-                
                 <img
                   src="/images/gros_bg_3-2.jpg"
                   alt="Aperçu de l'application PIAF"
-                  className="w-full h-[240px] md:h-[360px] object-cover object-center"
+                  className="
+                    w-full
+                    h-[220px] sm:h-[260px] md:h-[340px] lg:h-[420px]
+                    object-cover object-center
+                  "
+                  loading="lazy"
                 />
-                
               </div>
             </div>
 
